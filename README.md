@@ -8,4 +8,4 @@
 * Make migrations with command "python manage.py makemigrations&&python manage.py migrate"
 * Create super user with command "python manage.py createsuperuser"
 * Run django with command "python manage.py runserver"
-* Access url http://127.0.0.1:8000/accounts/dashboard/admin in your browser and sign with your credentials after click in "Subscriptions" and create a subscription with name "FREE" and save
+* Access url http://127.0.0.1:8000/accounts/dashboard/admin in your browser and sign with your credentials after click in "Subscriptions" and create a new subscription with name "FREE" and save
