@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Dados de pagamento</title>
+</head>
+<body style="padding: 0;margin: 0;box-sizing: border-box;font-family: 'Poppins', sans-serif;font-weight: 300;background-color: rgb(209, 209, 209);">
+    <div class="wrapper" style="max-width: 600px;margin: auto;background-color: white;">
+        <!--Header-->
+        <table class="header" style="width: 100%;background-color: rgb(132, 0, 255);color: white;">
+            <tr>
+                <td><a href="{{context.domain}}" style="text-decoration: none;color: white;"><h1 style="text-align: center;font-weight: 900;height: 15px;line-height: 15px;">{{context.project_name.upper}}</h1></a></td>
+            </tr>
+        </table>
+        <table id="section-1" style="width: 90%;margin: auto;padding: 20px 0px;background-color: white;color: #363636;">
+            <tr>
+                <td><h2 style="font-weight: 700;margin: auto;">Seus dados de pagamento foram atualizados</h2></td>
+            </tr>
+            <tr>
+                <td><div class="separator" style="height: 1px;background-color: #36363618;margin: 10px auto;"></div></td>
+            </tr>
+            <tr>
+                <td><p style="margin: 10px auto auto auto;">Você atualizou com sucesso os dados de pagamento, acompanhe abaixo as informações modificadas.</p></td>
+            </tr>
+            <tr style="background-color: #36363618;margin: 10px auto;display:block;border-radius: 5px;padding: 10px;">
+                <td style="display: block;"><p style="margin: auto;"><strong>Método: </strong>{{context.pay_method}}</p></td>
+                <td style="display: block;"><p style="margin: auto;"><strong>Chave: </strong>{{context.pay_key}}</p></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><a href="{{context.domain}}{% url 'settings' %}" style="display: block;margin: 10px auto 10px auto;text-decoration: none;background-color: rgb(132, 0, 255);color: white;border: 2px solid rgb(132, 0, 255);width: 300px;padding: 6px 0px;font-weight: 600;">Configurações de pagamento</a></td>
+            </tr>
+            <tr>
+                <td><p style="margin: auto auto 20px auto;">Não reconhece essa atividade? Por favor <a href="{{context.domain}}{% url 'password-reset' %}" style="color: rgb(132, 0, 255);">resete sua senha</a> e entre em contato com o <a href="malito:suporte@EDITAR.com" style="color: rgb(132, 0, 255);">suporte</a></p></td>
+            </tr>
+        </table>
+        <!--Footer-->
+        <table id="footer" style="width: 100%;background-color: rgb(132, 0, 255);color: white;">
+            <tr>
+                <td><a href="{{context.domain}}" style="text-decoration: none;color: white;"><h2 style="text-align: center;font-weight: 900;height: 15px;line-height: 15px;">{{context.project_name.upper}}</h2></a></td>
+            </tr>
+            <tr>
+                <td style="display: block;text-align: center;">Siga nossas redes sociais para companhar todas as novidades!</td>
+            </tr>
+            <table id="footer-social-medias" style="width: 100%;text-align: center;background-color: rgb(132, 0, 255);">
+                <tr style="display: inline-block;width: 40px;">
+                    <td><a href="https://www.facebook.com/EDITAR-104209759071594"><img src="https://i.ibb.co/DMCFc0y/facebook-new.png" alt="" border="0" style="width: 40px;"></a></td>
+                </tr>
+                <tr style="display: inline-block;width: 40px;">
+                    <td><a href=""><img src="https://i.ibb.co/PMRhkSB/whatsapp-v1.png" alt="" border="0" style="width: 40px;"></a></td>
+                </tr>
+                <tr style="display: inline-block;width: 40px;">
+                    <td><a href="https://www.instagram.com/gozble/"><img src="https://i.ibb.co/7yW2Sv6/instagram-new-v1.png" alt="" border="0" style="width: 40px;"></a></td>
+                </tr>
+                <tr style="display: inline-block;width: 40px;">
+                    <td><a href="https://twitter.com/EDITAR"><img src="https://i.ibb.co/crvLfVR/twitter-v1.png" alt="" border="0" style="width: 40px;"></a></td>
+                </tr>
+            </table>
+            <table id="footer-terms" style="width: 100%;background-color: rgb(132, 0, 255);text-align: center;padding-bottom: 20px;">
+                <tr style="display: inline-block;margin: 0px 5px;">
+                    <td><a href="{{context.domain}}{% url 'terms' %}" style="color: white;text-decoration: none;">Termos de Uso</a></td>
+                </tr>
+                <tr style="display: inline-block;margin: 0px 5px;">
+                    <td><a href="{{context.domain}}{% url 'privacy-policy' %}" style="color: white;text-decoration: none;">Política de Privacidade</a></td>
+                </tr>
+            </table>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'index/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/about.css' %}">
+{% endblock %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item">
+                <h2>Quem somos?</h2>
+                <p>Somos uma organização especializada em fazer dinheiro na internet através da utilização de anúncios em nossa plataforma. Somos bem recentes no mercado atual, contudo já mostramos nosso valor e nos destacamos, pois estamos em primeiro lugar do ranking, conquistando e inovando.</p>
+                <a href="" class="btn-first-steps">PRIMEIROS PASSOS</a>
+            </div>
+            <div class="flex-item img">
+                <img src="{% static 'index/img/360_F_276875402_OuMkmRDr5VVg4ODMcLV9qKVF5sXpqGT4.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="flex-item img">
+                <img src="{% static 'index/img/360_F_179091074_V0K10CGsr7x4HzyYEO8jaINXtQPuNiOi.jpg' %}" alt="">
+            </div>
+            <div class="flex-item">
+                <h2>Quais são nosso valores?</h2>
+                <p>Valorizamos o comprometimento com nossos clientes e usuários, trazendo sempre as melhores opções dentre o mercado. Gostamos da proximidade e transparência, pois não tem nada melhor que estar rodeado de pessoas honestas. Você não concorda?</p>
+                <a href="" class="btn-first-steps btn-first-steps-white">PRIMEIROS PASSOS</a>
+            </div>
+        </div>
+    </section>
+    <section id="section-3">
+        <div class="container">
+            <div class="flex-item">
+                <h2>O que oferemos?</h2>
+                <p>Oferecemos oportunidades para pessoas diversas que estão dispostas a reservar um pouco do seu tempo para clicar em anúncios em nossa plataforma. Em troca o recompensamos com uma quantia determinada em dinheiro que será depositada na conta desejada.</p>
+                <a href="" class="btn-first-steps">PRIMEIROS PASSOS</a>
+            </div>
+            <div class="flex-item img">
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'index/js/about.js' %}"></script>
+{% endblock %}

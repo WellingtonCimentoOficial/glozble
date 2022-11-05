@@ -1,0 +1,78 @@
+{% extends 'index/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/privacy-policy.css' %}">
+{% endblock %}
+
+{% block title %}Privacy Policy{% endblock %}
+
+{% block body %}
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item">
+                <h2>Política de Privacidade</h2>
+                <p>Disponibilizamos abaixo as políticas de privacidade da plataforma. Leia atentamente todas os parágrafos correspondentes.</p>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="flex-title">
+                <h2>Política de Privacidade</h2>
+                <p>Leia atentamente todas as informações contidas.</p>
+            </div>
+            <div class="flex-content">
+                <p><strong>{{context.project_name.capitalize}}</strong></p>
+                <br>
+                <p>O site {{context.project_name}} é de propriedade da {{context.project_name}}, que é uma controladora de dados de seus dados pessoais.</p>
+                <br>
+                <p>Adotamos esta Política de Privacidade, que determina como estamos processando as informações coletadas pela {{context.project_name}}, que também fornece as razões pelas quais devemos coletar determinados dados pessoais sobre você. Portanto, você deve ler esta Política de Privacidade antes de usar o site {{context.project_name}}.</p>
+                <br>
+                <p>Cuidamos dos seus dados pessoais e comprometemo-nos a garantir a sua confidencialidade e segurança.</p>
+                <br>
+                <p><strong>Informações pessoais que coletamos:</strong></p>
+                <br>
+                <p>Quando você visita o {{context.project_name}}, coletamos automaticamente certas informações sobre seu dispositivo, incluindo informações sobre seu navegador da web, endereço IP, fuso horário e alguns dos cookies instalados em seu dispositivo. Além disso, à medida que você navega no Site, coletamos informações sobre as páginas ou produtos individuais que você visualiza, quais sites ou termos de pesquisa o encaminharam para o Site e como você interage com o Site. Referimo-nos a essas informações coletadas automaticamente como "Informações do dispositivo". Além disso, podemos coletar os dados pessoais que você nos fornece (incluindo, entre outros, Nome, Sobrenome, e-mail, informações de pagamento, etc.)</p>
+                <br>
+                <p><strong>Por que processamos seus dados?</strong></p>
+                <br>
+                <p>Nossa principal prioridade é a segurança dos dados do cliente e, como tal, podemos processar apenas dados mínimos do usuário, apenas o que for absolutamente necessário para manter o site. As informações coletadas automaticamente são usadas apenas para identificar possíveis casos de abuso e estabelecer informações estatísticas sobre o uso do site. Essas informações estatísticas não são agregadas de forma a identificar qualquer usuário específico do sistema.</p>
+                <br>
+                <p>Você pode visitar o site sem nos dizer quem você é ou revelar qualquer informação, pela qual alguém possa identificá-lo como um indivíduo específico e identificável. Se, no entanto, pretender utilizar algumas das funcionalidades do website ou fornecer outros detalhes através do preenchimento de um formulário, poderá fornecer-nos dados pessoais, tais como o seu e-mail, nome, sobrenome, cpf, cnpj, chave aleatória, número de telefone. Você pode optar por não nos fornecer seus dados pessoais, mas talvez não consiga aproveitar alguns dos recursos do site. Por exemplo, você não conseguira efetuar uma solicitação de saque ou entrar em contato conosco diretamente do site. Os usuários que não tiverem certeza sobre quais informações são obrigatórias podem entrar em contato conosco via contato@EDITAR.com.</p>
+                <br>
+                <p><strong>Seus direitos:</strong></p>
+                <br>
+                <p>Se você é um residente europeu, tem os seguintes direitos relacionados aos seus dados pessoais:</p>
+                <br>
+                <p>O direito de ser informado.</p>
+                <p>O direito de acesso.</p>
+                <p>O direito à retificação.</p>
+                <p>O direito ao apagamento.</p>
+                <p>O direito de restringir o processamento.</p>
+                <p>O direito à portabilidade de dados.</p>
+                <p>O direito de oposição.</p>
+                <p>Direitos em relação à tomada de decisão automatizada e à criação de perfis.</p>
+                <p>Se você deseja exercer esse direito, entre em contato conosco através das informações de contato abaixo.</p>
+                <br>
+                <p>Além disso, se você for um residente europeu, notamos que estamos processando suas informações para cumprir contratos que possamos ter com você (por exemplo, se você fizer um pedido através do Site) ou para buscar nossos interesses comerciais legítimos listados acima de. Além disso, observe que suas informações podem ser transferidas para fora da Europa, incluindo Canadá e Estados Unidos.</p>
+                <br>
+                <p><strong>Links para outros sites:</strong></p>
+                <br>
+                <p>Nosso site pode conter links para outros sites que não são de nossa propriedade ou controlados por nós. Esteja ciente de que não somos responsáveis por esses outros sites ou práticas de privacidade de terceiros. Recomendamos que você fique atento ao sair do nosso site e leia as declarações de privacidade de cada site que possa coletar informações pessoais.</p>
+                <br>
+                <p><strong>Segurança da informação:</strong></p>
+                <br>
+                <p>Protegemos as informações que você fornece em servidores de computador em um ambiente controlado e seguro, protegido contra acesso, uso ou divulgação não autorizados. Mantemos salvaguardas administrativas, técnicas e físicas razoáveis para proteger contra acesso não autorizado, uso, modificação e divulgação de dados pessoais sob seu controle e custódia. No entanto, nenhuma transmissão de dados pela Internet ou rede sem fio pode ser garantida.</p>
+                <br>
+                <p><strong>Divulgação legal:</strong></p>
+                <br>
+                <p>Divulgaremos qualquer informação que coletarmos, usarmos ou recebermos se exigido ou permitido por lei, como para cumprir uma intimação ou processo legal semelhante, e quando acreditarmos de boa-fé que a divulgação é necessária para proteger nossos direitos, proteger sua segurança ou a segurança de outros, investigar fraudes ou responder a uma solicitação do governo.</p>
+                <br>
+                <p><strong>Informações de Contato:</strong></p>
+                <br>
+                <p>Se você deseja entrar em contato conosco para entender mais sobre esta Política ou deseja entrar em contato conosco sobre qualquer assunto relacionado a direitos individuais e suas Informações Pessoais, você pode enviar um e-mail para contato@EDITAR.com.</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'index/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/terms-of-use.css' %}">
+{% endblock %}
+
+{% block title %}Terms of use{% endblock %}
+
+{% block body %}
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item">
+                <h2>Termos de uso</h2>
+                <p>Disponibilizamos abaixo os termos e condições da plataforma. Leia atentamente todas as cláusulas correspondente ao mesmo.</p>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="flex-title">
+                <h2>Termos e Condições</h2>
+                <p>Leia atentamente todas as informações contidas.</p>
+            </div>
+            <div class="flex-content">
+                <p><strong>Bem-vindo ao {{context.project_name}}!</strong></p>
+                <br>
+                <p>Estes termos e condições descrevem as regras e regulamentos para o uso do site da {{context.project_name}}, localizado em https://EDITAR.com/</p>
+                <br>
+                <p>Ao acessar este site, assumimos que você aceita estes termos e condições. Não continue a usar {{context.project_name}} se não concordar em aceitar todos os termos e condições indicados nesta página.</p>
+                <br>
+                <p><strong>Cookies:</strong></p>
+                <br>
+                <p>O site usa cookies para ajudar a personalizar sua experiência online. Ao acessar {{context.project_name}}, você concorda em usar os cookies necessários.</p>
+                <p>Podemos usar cookies para coletar, armazenar e rastrear informações para fins estatísticos ou de marketing para operar nosso site.</p>
+                <br>
+                <p><strong>Licença:</strong></p>
+                <br>{{context.project_name}}
+                <p>Salvo indicação em contrário, a {{context.project_name}} e/ou seus licenciadores possuem os direitos de propriedade intelectual de todo o material da {{context.project_name}}. Todos os direitos de propriedade intelectual são reservados. Você pode acessá-lo a partir do {{context.project_name}} para seu uso pessoal sujeito às restrições estabelecidas nestes termos e condições.</p>
+                <br>
+                <p><strong>Você não deve:</strong></p>
+                <br>
+                <p>Copiar ou republicar material do {{context.project_name}}</p>
+                <p>Vender, alugar ou sublicenciar material da {{context.project_name}}</p>
+                <p>Reproduzir, duplicar ou copiar material do {{context.project_name}}</p>
+                <p>Redistribuir conteúdo do {{context.project_name}}</p>
+                <p>Este Contrato terá início na presente data.</p>
+                <br>
+                <p>Partes deste site oferecem aos usuários a oportunidade de postar e trocar opiniões e informações em determinadas áreas do site. {{context.project_name}} não filtra, edita, publica ou revisa Comentários antes de sua presença no site. Os comentários não refletem os pontos de vista e opiniões da {{context.project_name}}, seus agentes e/ou afiliados. Os comentários refletem os pontos de vista e opiniões da pessoa que publica seus pontos de vista e opiniões. Na medida do permitido pelas leis aplicáveis, a {{context.project_name}} não será responsável pelos Comentários ou qualquer responsabilidade, danos ou despesas causados e/ou sofridos como resultado de qualquer uso e/ou publicação e/ou apresentação dos Comentários neste local na rede Internet.</p>
+                <br>
+                <p>A {{context.project_name}} reserva-se o direito de monitorar todos os Comentários e remover quaisquer Comentários que possam ser considerados inadequados, ofensivos ou que causem violação destes Termos e Condições.</p>
+                <br>
+                <p><strong>Você garante e declara que:</strong></p>
+                <br>
+                <p>Você tem o direito de postar os Comentários em nosso site e tem todas as licenças e consentimentos necessários para fazê-lo;</p>
+                <p>Os Comentários não invadem nenhum direito de propriedade intelectual, incluindo, sem limitação, direitos autorais, patentes ou marcas registradas de terceiros;</p>
+                <p>Os Comentários não contêm nenhum material difamatório, calunioso, ofensivo, indecente ou ilegal, o que é uma invasão de privacidade.</p>
+                <p>Os Comentários não serão usados para solicitar ou promover negócios ou costumes ou apresentar atividades comerciais ou atividades ilegais.</p>
+                <p>Você concede à {{context.project_name}} uma licença não exclusiva para usar, reproduzir, editar e autorizar outros a usar, reproduzir e editar qualquer um de seus Comentários em todas e quaisquer formas, formatos ou mídia.</p>
+                <br>
+                <p><strong>Responsabilidade do conteúdo:</strong></p>
+                <br>
+                <p>Não nos responsabilizamos por qualquer conteúdo que apareça em seu site. Você concorda em nos proteger e nos defender contra todas as reivindicações levantadas em seu site. Nenhum link(s) deve(m) aparecer em qualquer site que possa ser interpretado como difamatório, obsceno ou criminoso, ou que infrinja, viole de outra forma ou defenda a violação ou outra violação de quaisquer direitos de terceiros.</p>
+                <br>
+                <p><strong>Reserva de Direitos:</strong></p>
+                <br>
+                <p>Reservamo-nos o direito de solicitar que você remova todos os links ou qualquer link específico para o nosso site. Você aprova a remoção imediata de todos os links para nosso site mediante solicitação. Também nos reservamos o direito de alterar estes termos e condições e sua política de vinculação a qualquer momento. Ao vincular continuamente ao nosso site, você concorda em se comprometer e seguir estes termos e condições de vinculação.</p>
+                <br>
+                <p><strong>Remoção de links do nosso site:</strong></p>
+                <br>
+                <p>Se você encontrar algum link em nosso site que seja ofensivo por qualquer motivo, você pode entrar em contato e nos informar a qualquer momento. Consideraremos solicitações para remover links, mas não somos obrigados a responder a você diretamente.</p>
+                <p>Não garantimos que as informações contidas neste site estejam corretas. Não garantimos sua integridade ou precisão, nem prometemos garantir que o site permaneça disponível ou que o material no site seja mantido atualizado.</p>
+                <br>
+                <p><strong>Conta do usuário:</strong></p>
+                <br>
+                <p>A sua conta necessita ter um nome de usuário único e um endereço de email único.</p>
+                <p>As contas são intransmissíveis.</p>
+                <p>A {{context.project_name.capitalize}} não altera dados da conta a pedido do usuário. Por motivos de segurança, os usuários podem modificar dados das suas próprias contas diretamente na sua página de configurações de segurança pessoais, em casos de erro no sistema.</p>
+                <br>
+                <p><strong>Carteira do usuário:</strong></p>
+                <br>
+                <p>O saldo acumulado na carteira é apenas um valor fictício que poderá ou não ser pago ao usuário correspondente da mesma. Não garantimos que os valores estão corretos, nem que são verdadeiros.</p>
+                <br>
+                <p><strong>Pagamentos e solicitações de saque:</strong></p>
+                <br>
+                <p>Os meios de pagamentos disponíveis para retiradas no momento é o PicPay, PayPal e Pix. Não garantimos que sua solicitação de saque do valor acumulado em sua carteira será totalmente, parcialmente ou minimamente pago. Não garantimos que você receberá algum retorno financeiro, nem que as informações contidas em nossos planos de assinatura disponibilizados para a compra são verdadeiras e/ou garantidas.</p>
+                <br>
+                <p><strong>Planos de assinatura:</strong></p>
+                <br>
+                <p>Através de sua conta você pode comprar qualquer plano de assinatura. Os planos de assinatura são utilizados para realizar atividades virtuais, não sendo garantia de ganhos e/ou retornos ao usuário.</p>
+                <br>
+                <p><strong>Isenção de responsabilidade:</strong></p>
+                <br>
+                <p>A {{context.project_name.capitalize}} não é responsável por qualquer pagamento de taxas de tudo aquilo que lhe foi pago como usuário. É sua responsabilidade declarar o que recebe e paga as taxas fiscais de acordo com as leis em vigor no seu país.</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

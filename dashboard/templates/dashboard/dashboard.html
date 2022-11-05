@@ -1,0 +1,160 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% load djmoney %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css' %}">
+{% endblock %}
+
+{% block body %}
+    <section id="section-2">
+        <div class="container-geral">
+            <div class="flex-item">
+                <h3>RESUMO GERAL DE ATIVIDADES</h3>
+            </div>
+            <div class="container">
+                <a href="{% url 'ad' %}" class="flex-item">
+                    <i class="fa-solid fa-audio-description"></i>
+                    <span class="number-display">{{infos.ads_viewed}}</span>
+                    <span>Assistidos</span>
+                </a>
+                <a href="{% url 'withdraw' %}" class="flex-item account-money">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                    <span class="number-display">{% money_localize infos.transactions_deposit_total_value 'BRL' %}</span>
+                    <span>BRL</span>
+                </a>
+                <a href="{% url 'ad' %}" class="flex-item">
+                    <i class="fa-solid fa-hand-pointer"></i>
+                    <span class="number-display">{{infos.ads_clicked}}</span>
+                    <span>Cliques</span>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-3">
+        <div class="container">
+            <div class="flex-item-container" id="flex-table">
+                <div class="flex-item">
+                    <h3>GANHOS E BÔNUS POR ANÚNCIOS</h3>
+                </div>
+                <div class="flex-item table">
+                    <table>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Localização</th>
+                            <th>Comissão</th>
+                            <th>Status</th>
+                        </tr>
+                        {% for info in infos.transactions_deposit %}
+                            <tr>
+                                <td>{{info.created_at|date:"d-m-Y H:i:s"}}</td>
+                                {% if info.type == '1' %}
+                                    <td>Depósito</td>
+                                {% elif info.type == '2' %}
+                                    <td>Bônus</td>
+                                {% endif %}
+                                <td>Brasil</td>
+                                <td style="color: green;">{% money_localize info.value 'BRL' %}</td>
+                                {% if info.status == '0' %}
+                                    <td>Cancelado</td>
+                                {% elif info.status == '1' %}
+                                    <td>Pendente...</i></td>
+                                {% elif info.status == '2' %}
+                                    <td><i class="fa-solid fa-check" style="color: green;"></i></td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="flex-item-container" id="flex-withdraw">
+                <div class="flex-item">
+                    <h3>ÚLTIMOS SAQUES</h3>
+                </div>
+                <div class="flex-item table">
+                    <table>
+                        <tr>
+                            <th>Data</th>
+                            <th>Pagamento</th>
+                            <th>Valor</th>
+                            <th>Status</th>
+                        </tr>
+                        {% for info in infos.transactions_withdraw %}
+                            <tr>
+                                <td>{{info.created_at|date:"d-m-Y H:i:s"}}</td>
+                                {% if info.method == '0' %}
+                                    <td>PicPay</td>
+                                {% elif info.method == '1' %}
+                                    <td>PayPal</td>
+                                {% elif info.method == '2' %}
+                                    <td>Pix</td>
+                                {% elif info.method == '3' %}
+                                    <td>{{infos.project_name.capitalize}}</td>
+                                {% endif %}
+                                <td style="color: red;">-{% money_localize info.value 'BRL' %}</td>
+                                {% if info.status == '0' %}
+                                    <td>Cancelada</td>
+                                {% elif info.status == '1' %}
+                                    <td>Pendente...</td>
+                                {% elif info.status == '2' %}
+                                    <td>Concluído</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-4">
+        <div class="container">
+            <div class="flex-item">
+                <h3>GRÁFICO DE GANHOS MENSAIS DE</h3>
+            </div>
+            <div class="flex-item">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="section-5">
+        <div class="container">
+            <div class="flex-item">
+                <h3>TOP 4 MAIORES SAQUES</h3>
+            </div>
+            <div class="flex-item-container">
+                <div class="flex-item">
+                    <h4>SEGUNDO LUGAR</h4>
+                    <i class="fa-solid fa-medal" style="color: rgb(165, 165, 165);"></i>
+                    <p>Agradecemos por deixar que nossa plataforma faça parte do seu dia a dia e com um imenso prazer classificamos esse saque com a medalha de <strong>PRATA</strong> por estar entre os seus três maiores saques na nossa plataforma desde a criação da sua conta.</p>
+                    <span class="dest-money">{% money_localize infos.silver_withdraw 'BRL' %}</span>
+                    <span>BRL</span>
+                </div>
+                <div class="flex-item">
+                    <h4>PRIMEIRO LUGAR</h4>
+                    <i class="fa-solid fa-medal" style="color: #FFD700;"></i>
+                    <p>Agradecemos por deixar que nossa plataforma faça parte do seu dia a dia e com um imenso prazer classificamos esse saque com a medalha de <strong>OURO</strong> por estar entre os seus três maiores saques na nossa plataforma desde a criação da sua conta.</p>
+                    <span class="dest-money">{% money_localize infos.gold_withdraw 'BRL' %}</span>
+                    <span>BRL</span>
+                </div>
+                <div class="flex-item">
+                    <h4>TERCEIRO LUGAR</h4>
+                    <i class="fa-solid fa-medal" style="color: #b08d57;"></i>
+                    <p>Agradecemos por deixar que nossa plataforma faça parte do seu dia a dia e com um imenso prazer classificamos esse saque com a medalha de <strong>BRONZE</strong> por estar entre os seus três maiores saques na nossa plataforma desde a criação da sua conta.</p>
+                    <span class="dest-money">{% money_localize infos.bronze_withdraw 'BRL' %}</span>
+                    <span>BRL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'dashboard/js/chart.js' %}"></script>
+    <script src="{% static 'dashboard/js/grafico.js' %}"></script>
+    <script src="{% static 'dashboard/js/dashboard.js' %}"></script>
+{% endblock %}

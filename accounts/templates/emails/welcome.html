@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Welcome!</title>
+</head>
+<body style="padding: 0;margin: 0;box-sizing: border-box;font-family: 'Poppins', sans-serif;font-weight: 300;background-color: rgb(209, 209, 209);">
+    <!--Header-->
+    <div class="wrapper" style="max-width: 600px;margin: auto;background-color: white;">
+        <table class="header" style="width: 100%;background-color: rgb(132, 0, 255);color: white;">
+            <tr>
+                <td><a href="{{context.domain}}" style="text-decoration: none;color: white;"><h1 style="text-align: center;font-weight: 900;height: 15px;line-height: 15px;">{{context.project_name.upper}}</h1></a></td>
+            </tr>
+            <!--Image Header-->
+            <table id="image" style="width: 100%;display: inline-flex;">
+                <tr style="display: inline-flex;">
+                    <td style="display: inline-flex; padding: 0;"><img src="https://images.pexels.com/photos/5899201/pexels-photo-5899201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" style="max-width: 100%;"></td>
+                </tr>
+            </table>
+            <!--Header Description-->
+            <table id="header-description" style="width: 100%;background-color: rgb(132, 0, 255);color: white;">
+                <tr>
+                    <td><h2 style="width: 95%;margin: 20px auto auto auto;">Olá, {{context.username}}!</h2></td>
+                </tr>
+                <tr>
+                    <td><p style="width: 95%;margin: auto;">Bem-vindo(a) ao {{context.project_name.capitalize}}</p></td>
+                </tr>
+                <tr>
+                    <td><p style="width: 95%;margin: auto auto 20px auto;"><em>Ficamos felizes em ter você aqui conosco e saber que você está em busca de novas fontes de renda. Lembre-se que aqui na {{context.project_name.capitalize}} para ter ganhos só depende de você!</em></p></td>
+                </tr>
+            </table>
+        </table>
+        <table id="section-1" style="width: 100%;background-color: white;color: #363636;">
+            <tr>
+                <td><h3 style="text-align: center;">Funcionalidades</h3></td>
+            </tr>
+            <table class="icons" style="width: 95%;margin: auto;background-color: white;color: #363636;text-align: center;">
+                <tr>
+                    <td style="display: inline-block;text-align: center;-webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);padding: 10px;margin: 5px;width: calc(100%/3.6);background-color: white;">
+                        <img style="width: 40px;" src="https://i.ibb.co/QXwrhb0/money.png" alt="">
+                        <p>Ganhe dinheiro</p>
+                    </td>
+                    <td style="display: inline-block;text-align: center;-webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);padding: 10px;margin: 5px;width: calc(100%/3.6);background-color: white;">
+                        <img style="width: 40px;" src="https://i.ibb.co/vDmnQ03/graphic.png" alt="">
+                        <p>Estatísticas mensais</p>
+                    </td>
+                    <td style="display: inline-block;text-align: center;-webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);padding: 10px;margin: 5px;width: calc(100%/3.6);background-color: white;">
+                        <img style="width: 40px;" src="https://i.ibb.co/3sqFZ10/ads.png" alt="">
+                        <p>Anúncios Ilimitados</p>
+                    </td>
+                </tr>
+                <table style="width: 95%;margin: auto;background-color: white;color: #363636;">
+                    <tr>
+                        <td style="display: block;text-align: center;-webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);padding: 10px;margin: 5px;">
+                            <img style="width: 40px;" src="https://i.ibb.co/S3H2r8M/bell.png" alt="">
+                            <p>Notificações a cada transação</p>
+                        </td>
+                    </tr>
+                </table>
+            </table>
+            <table class="description" style="width: 95%;margin: auto;background-color: white;">
+                <tr>
+                    <td style="width: 100%;">
+                        <p style="text-align: center;margin-bottom: 25px;">Aproveite todas as funcionalidades disponibilizadas na plataforma. Não esqueça de compartilhar com amigos e familiares para que todos tenham uma oportunidade de ganhar dinheiro na internet igual a você.</p>
+                    </td>
+                </tr>
+            </table>
+        </table>
+        <table id="section-2" style="width: 100%;background-color: rgb(132, 0, 255);color: white;">
+            <tr>
+                <td><h3 style="text-align: center;">Anúncios</h3></td>
+            </tr>
+            <tr>
+                <td style="display: block;text-align: center;width: 95%;margin: auto;">Comece já a assistir anúncios e ganhar dinheiro. Clicando no botão abaixo você será redirecionado(a) para a página de anúncios onde receberá uma quantia especifica de acordo com o plano assinado em sua conta.</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><a href="{{context.domain}}{% url 'ad' %}" style="display: block;margin: 10px auto 20px auto;text-decoration: none;color: white;border: 2px solid white;width: 200px;padding: 6px 0px;transition: 0.3s;">Primeiros passos</a></td>
+            </tr>
+        </table>
+        <table id="section-3" style="width: 95%;margin: auto;color: #363636;">
+            <tr>
+                <td><h3 style="text-align: center;">Diferenciais</h3></td>
+            </tr>
+            <tr>
+                <td>
+                    <ul><li>Plataforma com um design elegante, adaptável a qualquer tamanho de tela como de celulares, tablets, desktops, etc. O site é 100% seguro e protegido contra ataques hackers dos mais diversos.</li></ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul><li>Temos redes sociais onde divulgamos novidades e atualizações da plataforma. Somos muito interativos com nossos usuários e levamos em consideração todos os tipos de melhorias solicitadas.</li></ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul><li>Os pagamentos são totalmente seguros e realizados através do PicPay, PayPal ou Pix. Lembrando de ler os <a href="{{context.domain}}{% url 'terms' %}" style="color: rgb(132, 0, 255)">termos de uso</a> da plataforma para que não haja nenhuma dúvida.</li></ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul><li style="margin-bottom: 30px;">Resumo de ganhos mensais em forma de gráfico para que seja possível observar a evolução de ganhos de acordo com os meses ao longo do ano.</li></ul>
+                </td>
+            </tr>
+        </table>
+        <table id="footer" style="width: 100%;background-color: rgb(132, 0, 255);color: white;">
+            <tr>
+                <td><a href="{{context.domain}}" style="text-decoration: none;color: white;"><h2 style="text-align: center;font-weight: 900;height: 15px;line-height: 15px;">{{context.project_name.upper}}</h2></a></td>
+            </tr>
+            <tr>
+                <td style="display: block;text-align: center;">Siga nossas redes sociais para companhar todas as novidades!</td>
+            </tr>
+            <table id="footer-social-medias" style="width: 100%;text-align: center;background-color: rgb(132, 0, 255);">
+                <tr style="display: inline-block;width: 40px;">
+                    <td><a href="https://www.facebook.com/EDITAR-104209759071594"><img src="https://i.ibb.co/DMCFc0y/facebook-new.png" alt="" border="0" style="width: 40px;"></a></td>
+                </tr>
+                <tr style="display: inline-block;width: 40px;">
+                    <td><a href=""><img src="https://i.ibb.co/PMRhkSB/whatsapp-v1.png" alt="" border="0" style="width: 40px;"></a></td>
+                </tr>
+                <tr style="display: inline-block;width: 40px;">
+                    <td><a href="https://www.instagram.com/gozble/"><img src="https://i.ibb.co/7yW2Sv6/instagram-new-v1.png" alt="" border="0" style="width: 40px;"></a></td>
+                </tr>
+                <tr style="display: inline-block;width: 40px;">
+                    <td><a href="https://twitter.com/EDITAR"><img src="https://i.ibb.co/crvLfVR/twitter-v1.png" alt="" border="0" style="width: 40px;"></a></td>
+                </tr>
+            </table>
+            <table id="footer-terms" style="width: 100%;background-color: rgb(132, 0, 255);text-align: center;padding-bottom: 20px;">
+                <tr style="display: inline-block;margin: 0px 5px;">
+                    <td><a href="{{context.domain}}{% url 'terms' %}" style="color: white;text-decoration: none;">Termos de Uso</a></td>
+                </tr>
+                <tr style="display: inline-block;margin: 0px 5px;">
+                    <td><a href="{{context.domain}}{% url 'privacy-policy' %}" style="color: white;text-decoration: none;">Política de Privacidade</a></td>
+                </tr>
+            </table>
+        </table>
+    </div>
+</body>
+</html>

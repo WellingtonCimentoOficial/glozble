@@ -1,0 +1,24 @@
+{% extends 'index/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/help.css' %}">
+{% endblock %}
+
+{% block title %}Help{% endblock %}
+
+{% block body %}
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item">
+                <h2>Precisa de ajuda?</h2>
+                <p>Para obter ajuda, deixaremos abaixo as perguntas mais frequentes de nossos usuários. Caso ainda permaneça com dúvidas, utilize a pagina de <em><a href="">contato</a></em> para falar conosco.</p>
+            </div>
+        </div>
+    </section>
+    {% include 'index/common-questions.html' %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'index/js/help.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% load djmoney %}
+
+{% block title %}Ad{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'dashboard/css/ad.css' %}">
+{% endblock %}
+
+{% block body %}
+    <section id="section-2">
+        <div class="container">
+            <div class="flex-item-container">
+                <!--remover-->
+                <a href="https://EDITAR.com/excluirexcluirexcluir/usuario=blabla&&client=ca-pub-1570314964443994"></a>
+                <!--ANÚNCIO-->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1570314964443994"
+                    crossorigin="anonymous"></script>
+                <!-- teste EDITAR -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-EDITAR"
+                    data-ad-slot="1569847670"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <!--END-->
+                <div class="flex-items">
+                    <div class="timer-ads-info">
+                        <span>Aguarde...</span>
+                    </div>
+                    <div class="timer-ads">
+                        <span id="timer-number">10</span>
+                    </div>
+                    <div class="timer-description">
+                        <p><strong>Quer ganhar mais na plataforma?</strong> Então aproveite as promoções para assinar um de nossos planos, lembrando sempre que muitos são por tempo limitado. Acesse nossa página de planos <a href="{% url 'subscriptions' %}"><em>clicando aqui</em></a> e adquira já.</p>
+                    </div>
+                    <div id="message"><span></span></div>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="adstoken" value="{{context.adstoken}}">
+                        <input type="submit" id="btn-recive" class="btn-disabled" value="{{request.user.subscription.click_price}}">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'dashboard/js/ad.js' %}"></script>
+{% endblock %}

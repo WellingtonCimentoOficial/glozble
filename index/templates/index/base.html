@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'index/img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'index/css/spinner.css' %}">
+    <link rel="stylesheet" href="{% static 'index/css/default_index.css' %}">
+    {% block head %}{% endblock %}
+    <title>EDITAR | {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="flex-menu"><i class="fa-solid fa-bars"></i></div>
+    <div id="spinner-loading"><img src="{% static 'index/img/spinner.gif' %}"></div>
+    <header>
+        <div class="container">
+            <div class="flex-logo">
+                <a href="{% url 'index' %}"><img id="logo" src="{% static 'index/img/logo-title-transparent.png' %}"></a>
+            </div>
+            <nav class="flex-item">
+                <ul>
+                    <li><a href="{% url 'index' %}">PÁGINA INICIAL</a></li>
+                    <li><a href="{% url 'subscriptions' %}">PLANOS</a></li>
+                    <li><a href="{% url 'contact' %}">CONTATO</a></li>
+                    <li><a href="{% url 'about' %}">SOBRE</a></li>
+                    <li><a href="{% url 'login' %}" id="sign-button">REGISTRAR-SE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> 
+    {% block body %}
+    {% endblock %}
+    <footer>
+        <div class="container">
+            <div class="flex-item">
+                <span id="footer-text"></span>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Google tag (gtag.js) google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOURID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOURID');
+    </script>
+    <!--end-->
+
+    <script src="https://kit.fontawesome.com/32e61be44a.js" crossorigin="anonymous"></script>
+    <script src="{% static 'index/js/default.js' %}"></script>
+    <script src="{% static 'index/js/default_index.js' %}"></script>
+    {% block script %}
+    {% endblock %}
+</body>
+</html>

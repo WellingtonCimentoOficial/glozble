@@ -1,0 +1,96 @@
+{% extends 'index/base.html' %}
+{% load static %}
+
+{% block title %}Register{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'accounts/css/register.css' %}">
+{% endblock %}
+    
+{% block body %}
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item-container">
+                <div class="flex-item">
+                    <h2>{{context.project_name.upper}} REGISTRO</h2>
+                    <P>Bônus de <strong>R$ 5,00</strong> ao criar sua conta.</P>
+                </div>
+                <form action="{% url 'register' %}" method="post" id="form-register">
+                    {% csrf_token %}
+                    <span>Nome de usuário</span>
+                    <div class="flex-item">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="username_register" id="username_register" placeholder="Digite seu usuário" minlength="5" maxlength="20" required>
+                        <span id="username-register-message" class="msg-error-text"></span>
+                    </div>
+                    <span>E-mail</span>
+                    <div class="flex-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email_register" id="email_register" placeholder="Digite seu e-mail" maxlength="64" required>
+                        <span id="email-register-message" class="msg-error-text"></span>
+                    </div>
+                    <span>Senha de login</span>
+                    <div class="flex-item">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password1_register" id="password1_register" placeholder="Digite sua senha" minlength="8" maxlength="64" required>
+                        <span id="password1-register-message" class="msg-error-text"></span>
+                    </div>
+                    <span>Confirmação de senha</span>
+                    <div class="flex-item">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password2_register" id="password2_register" placeholder="Confirme sua senha" minlength="8" maxlength="64" required>
+                        <span id="password2-register-message" class="msg-error-text"></span>
+                    </div>
+                    <div class="flex-terms">
+                        <input type="checkbox" name="terms_register" id="terms_register" required>
+                        <label for="terms">Eu aceito os <a href="{% url 'terms' %}">Termos de Uso</a> e <a href="{% url 'privacy-policy' %}">Política de Privacidade</a>.</label>
+                    </div>
+                    <div id="captcha-register"></div>
+                    <input type="submit" value="REGISTRAR">
+                </form>
+            </div>
+            <div class="flex-item-container">
+                <div class="flex-item">
+                    <h2>{{context.project_name.upper}} LOGIN</h2>
+                </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div {% if message.tags %} class="message {{message.tags}}" {% endif %}>
+                                <span>{{message}}</span>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <form action="{% url 'login' %}" method="post" id="form-login">
+                    {% csrf_token %}
+                    <span>Nome de usuário</span>
+                    <div class="flex-item">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="username_login" id="username_login" placeholder="Digite seu usuário" minlength="5" maxlength="20" required>
+                        <span id="username-login-message" class="msg-error-text"></span>
+                    </div>
+                    <span>Senha de login</span>
+                    <div class="flex-item">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password_login" id="password_login" placeholder="Digite sua senha" minlength="8" maxlength="64" required>
+                        <span id="password-login-message" class="msg-error-text"></span>
+                    </div>
+                    <div class="flex-terms">
+                        <input type="checkbox" name="rememberme_login" id="rememberme_login">
+                        <label for="terms">Lembre de min</label>
+                    </div>
+                    <div id="captcha-login"></div>
+                    <input type="submit" value="LOGIN">
+                </form>
+                <div class="flex-item">
+                    <p><a href="{% url 'password-reset' %}">Esqueci a senha</a></p>
+                    <p id="make-account">Não tem uma conta? <a href="">Crie uma</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=createCaptcha&render=explicit" async defer></script>
+    <script src="{% static 'accounts/js/register.js' %}"></script>
+{% endblock %}

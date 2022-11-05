@@ -1,0 +1,174 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% load djmoney %}
+
+{% block title %}Withdraw{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'dashboard/css/withdraw.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div id="message-poup"></div>
+    <section id="section-2">
+        <div class="container">
+            <div class="flex-item-saldo">
+                <div class="flex-item">
+                    <h4>Seu saldo atual</h4>
+                    <i class="fa-solid fa-sack-dollar"></i>
+                    <span id="my-money">{% money_localize request.user.wallet.value 'BRL' %}</span>
+                    <p>Disponível</p>
+                </div>
+            </div>
+            <div class="flex-item-pagamento">
+                <h2>Formas de pagamento</h2>
+                <p>Selecione uma forma de pagamento</p>
+                {% if request.user.wallet.payment_method == "0" %}
+                    <div class="flex-item" id="mpicpay" style="border-color: var(--roxo-principal);">
+                        <img src="{% static 'dashboard/img/ppay-icon.png' %}" alt="" srcset="">
+                        <span>PicPay</span>
+                    </div>
+                    <div class="flex-item" id="mpaypal">
+                        <img src="{% static 'dashboard/img/transferir.png' %}" alt="" srcset="">
+                        <span>PayPal</span>
+                    </div>
+                    <div class="flex-item" id="mpix">
+                        <img src="{% static 'dashboard/img/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png' %}" alt="" srcset="">
+                        <span>Pix</span>
+                    </div>
+                {% elif request.user.wallet.payment_method == "1" %}
+                    <div class="flex-item" id="mpicpay">
+                        <img src="{% static 'dashboard/img/ppay-icon.png' %}" alt="" srcset="">
+                        <span>PicPay</span>
+                    </div>
+                    <div class="flex-item" id="mpaypal" style="border-color: var(--roxo-principal);">
+                        <img src="{% static 'dashboard/img/transferir.png' %}" alt="" srcset="">
+                        <span>PayPal</span>
+                    </div>
+                    <div class="flex-item" id="mpix">
+                        <img src="{% static 'dashboard/img/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png' %}" alt="" srcset="">
+                        <span>Pix</span>
+                    </div>
+                {% elif request.user.wallet.payment_method == "2" %}
+                    <div class="flex-item" id="mpicpay">
+                        <img src="{% static 'dashboard/img/ppay-icon.png' %}" alt="" srcset="">
+                        <span>PicPay</span>
+                    </div>
+                    <div class="flex-item" id="mpaypal">
+                        <img src="{% static 'dashboard/img/transferir.png' %}" alt="" srcset="">
+                        <span>PayPal</span>
+                    </div>
+                    <div class="flex-item" id="mpix" style="border-color: var(--roxo-principal);">
+                        <img src="{% static 'dashboard/img/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png' %}" alt="" srcset="">
+                        <span>Pix</span>
+                    </div>
+                {% else %}
+                    <div class="flex-item" id="mpicpay" style="border-color: var(--roxo-principal);">
+                        <img src="{% static 'dashboard/img/ppay-icon.png' %}" alt="" srcset="">
+                        <span>PicPay</span>
+                    </div>
+                    <div class="flex-item" id="mpaypal">
+                        <img src="{% static 'dashboard/img/transferir.png' %}" alt="" srcset="">
+                        <span>PayPal</span>
+                    </div>
+                    <div class="flex-item" id="mpix">
+                        <img src="{% static 'dashboard/img/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png' %}" alt="" srcset="">
+                        <span>Pix</span>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="flex-item-sacar">
+                <h2>Informações do Recebedor</h2>
+                <p>Preencha os dados atentamentamente, pois não poderá mais ser desfeito</p>
+                <form action="" method="post" id="form-withdraw">
+                    {% csrf_token %}
+                    <input type="text" name="qtd-saque" id="qtd-saque" minlength="3" maxlength="13" placeholder="Valor do saque" required>
+                    <span id="qtd-saque-message" class="msg-error-text"></span>
+                    {% if request.user.wallet.payment_key != None %}
+                        <input type="text" name="info-saque" id="info-saque" placeholder="E-mail do PicPay" value="{{request.user.wallet.payment_key}}" required>
+                    {% else %}
+                        <input type="text" name="info-saque" id="info-saque" placeholder="E-mail do PicPay" required>
+                    {% endif %}
+
+                    {% if request.user.wallet.payment_method == "0" %}
+                        <input type="radio" name="pagamento" id="oppicpay" value="PicPay" checked hidden>
+                        <input type="radio" name="pagamento" id="oppaypal" value="PayPal" hidden>
+                        <input type="radio" name="pagamento" id="oppix" value="Pix" hidden>
+                    {% elif request.user.wallet.payment_method == "1" %}
+                        <input type="radio" name="pagamento" id="oppicpay" value="PicPay" hidden>
+                        <input type="radio" name="pagamento" id="oppaypal" value="PayPal" checked hidden>
+                        <input type="radio" name="pagamento" id="oppix" value="Pix" hidden>
+                    {% elif request.user.wallet.payment_method == "2" %}
+                        <input type="radio" name="pagamento" id="oppicpay" value="PicPay" hidden>
+                        <input type="radio" name="pagamento" id="oppaypal" value="PayPal" hidden>
+                        <input type="radio" name="pagamento" id="oppix" value="Pix" checked hidden>
+                    {% else %}
+                        <input type="radio" name="pagamento" id="oppicpay" value="PicPay" checked hidden>
+                        <input type="radio" name="pagamento" id="oppaypal" value="PayPal" hidden>
+                        <input type="radio" name="pagamento" id="oppix" value="Pix" hidden>
+                    {% endif %}
+                    <span id="info-saque-message" class="msg-error-text"></span>
+                    <input type="submit" value="Transferir Recursos">
+                </form>
+            </div>
+            <div class="flex-item-compartilhar">
+                <h2>Compartilhe</h2>
+                <p>Compartilhe com amigos e familiares</p>
+                <div class="flex-item">
+                    <img id="whatsapp-share" src="{% static 'dashboard/img/whatsapp.png' %}" alt="whatsapp">
+                    <img id="instagram-share" src="{% static 'dashboard/img/instagram.png' %}" alt="instagram">
+                    <img id="facebook-share" src="{% static 'dashboard/img/face.png' %}" alt="facebook">
+                    <img id="twitter-share" src="{% static 'dashboard/img/twit.png' %}" alt="twitter">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-3">
+        <div class="container">
+            <div class="flex-item">
+                <h2>EXTRATO DE RETIRADA DOS ÚLTIMOS 30 DIAS</h2>
+            </div>
+            <div class="flex-item">
+                <table border="0" cellspacing="1">
+                    <tr>
+                        <th>DATA</th>
+                        <th>ID</th>
+                        <th>TIPO</th>
+                        <th>MÉTODO</th>
+                        <th>VALOR</th>
+                        <th>STATUS</th>
+                    </tr>
+                    {% for transaction in infos.withdraw_transactions %}
+                        <tr>
+                            <td>{{transaction.created_at|date:"d-m-Y H:i:s"}}</td>
+                            <td>{{transaction.transform_id_zfill}}</td>
+                            <td>Saque</td>
+                            {% if transaction.method == "0" %}
+                                <td>PicPay</td>
+                            {% elif transaction.method == "1" %}
+                                <td>PayPal</td>
+                            {% elif transaction.method == "2" %}
+                                <td>Pix</td>
+                            {% elif transaction.method == "3" %}
+                                <td>{{infos.project_name.capitalize}}</td>
+                            {% endif %}
+                            <td>-{% money_localize transaction.value 'BRL' %}</td>
+                            {% if transaction.status == "0" %}
+                                <td>Cancelado</td>
+                            {% elif transaction.status == "1" %}
+                                <td>Pendente...</td>
+                            {% elif transaction.status == "2" %}
+                                <td>Concluído</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'dashboard/js/widthdraw.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'index/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/contact.css' %}">
+{% endblock %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item">
+                <h2>Deixe seu Feedback</h2>
+                <p>Deixe um feedback sobre sua experiência em nossa plataforma, pois assim conseguimos melhorar os pontos negativos e continuar sempre evoluindo. </p>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="flex-item-container">
+                <div class="flex-item">
+                    <h2>Contate-nos</h2>
+                    <p>Estamos aqui para responder a qualquer pergunta que você possa ter sobre a plataforma ou nossa equipe. Entre em contato conosco utilizando os campos abaixo e responderemos o mais breve possível. ficaremos muito felizes que você entre em contato usando este formulário.</p>
+                </div>
+                <div class="flex-item">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="flex-item">
+                            <div class="flex-break">
+                                <label for="name">Nome (Obrigatório)</label>
+                                <input type="text" name="name" id="name" placeholder="Nome Completo" minlength="1" maxlength="50" required>
+                            </div>
+                            <div class="flex-break">
+                                <label for="email">Email (Obrigatório)</label>
+                                <input type="email" name="email" id="email" placeholder="Email" minlength="1" maxlength="50" required>
+                            </div>
+                        </div>
+                        <div class="flex-break">
+                            <label for="message">Mensagem (Obrigatório)</label>
+                            <textarea name="message" id="message" cols="100" rows="15" maxlength="1686" required></textarea>
+                        </div>
+                        <input id="submit" type="submit" value="Enviar">
+                        <div class="g-recaptcha"
+                            data-sitekey="YOURKEY"
+                            data-callback="sendEmail"
+                            data-size="invisible">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'index/js/contact.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'index/base.html' %}
+{% load static %}
+{% load djmoney %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/subscriptions.css' %}">
+{% endblock %}
+
+{% block title %}Subscriptions{% endblock %}
+
+{% block body %}
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item">
+                <h2>Planos de Assinatura</h2>
+                <p>Assine já um de nossos planos de assinatura para dar um upgrade na quantidade de cliques que poderá ser efetuado diariamente.</p>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="flex-title">
+                <h2>Planos disponíveis</h2>
+                <p>Lembre sempre de verificar o tipo de plano que você está assinando, temos planos mensais, anuais e vitalício. O valor de retorno é calculado utilizando 30 dias mensais, caso você não utilize o limite diário de cliques o valor de retorno deverá ser menor que o descrito.</p>
+            </div>
+            <div class="flex-container">
+                {% for subscription in infos.subscriptions %}
+                    <div class="flex-item-container">
+                        <h3>{{subscription.name}}</h3>
+                        <hr>
+                        <p>{{subscription.description}}</p>
+                        <div class="flex-item">
+                            <span>Tipo:</span>
+                            {% if subscription.type == "0" %}
+                                <em>Vitálicio</em>
+                            {% endif %}
+                        </div>
+                        <div class="flex-item">
+                            <span>Cliques diário:</span>
+                            <em>{{subscription.limit_clicks}}</em>
+                        </div>
+                        <div class="flex-item">
+                            <span>Retorno por clique:</span>
+                            <em>{% money_localize subscription.click_price 'BRL' %}</em>
+                        </div>
+                        <div class="flex-item">
+                            <span>Retorno diário:</span>
+                            <em>{% money_localize subscription.daily_earnings 'BRL' %}</em>
+                        </div>
+                        <div class="flex-item">
+                            <span>Retorno Mensal:</span>
+                            <em>{% money_localize subscription.monthly_earnings 'BRL' %}</em>
+                        </div>
+                        <div class="flex-item">
+                            <span>Retorno Anual:</span>
+                            <em>{% money_localize subscription.annual_earnings 'BRL' %}</em>
+                        </div>
+                        <span class="plan-value">{% money_localize subscription.price 'BRL' %}</span>
+                        {% if subscription.id == request.user.subscription.id %}
+                            <a href="" class="assinar" style="pointer-events: none; background-color: rgba(132, 0, 255, 0.342); border-color: rgba(132, 0, 255, 0.342);">Adquirido</a>
+                        {% else %}
+                            <a href="" class="assinar">Assine já</a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

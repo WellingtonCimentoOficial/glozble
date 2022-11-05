@@ -1,0 +1,5 @@
+EMAIL_REGEX = r"\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b"
+CPF_REGEX = r"[\d]{3}.[\d]{3}.[\d]{3}\-[\d]{2}"
+CNPJ_REGEX = r"[\d]{2}.[\d]{3}.[\d]{3}\/[\d]{4}-[\d]{2}"
+RANDOM_KEY_REGEX = r"[a-z\d]{8}-[a-z\d]{4}-[a-z\d]{4}-[a-z\d]{4}-[a-z\d]{12}"
+SPECIAL_CHARACTERS_NO_SPACE = r"[\'\"!@#$%¨&*()\-_+=£¢¬§´`{}[\]ªº|\\,.:;?/°]"

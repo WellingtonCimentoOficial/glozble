@@ -1,0 +1,153 @@
+{% extends 'index/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/index.css' %}">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item">
+                <h2>GANHE R$ {{context.free_plan_click_price.click_price}} BRL POR CADA CLIQUE</h2>
+                <p>Clique nos anúncios e receba sua recompensa!</p>
+                <a href="{% url 'register' %}">PRIMEIROS PASSOS</a>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="flex-header">
+                <h2>Benefícios e Vantagens</h2>
+                <p>Listamos alguns de nossos benefícios nos cards abaixo de forma bem organizada e clara para que não haja dúvidas. Aqui as vantagens nunca acabam, pois estamos sempre preocupados em lançar novidades.</p>
+            </div>
+            <div class="flex-item-container">
+                <div class="flex-item">
+                    <h3>POSSIBILIDADES DE GANHOS</h3>
+                    <p>Com dedicação os ganhos multiplicam-se.</p>
+                    <p><i class="fa-solid fa-check"></i> Plataforma mais completa</p>
+                    <p><i class="fa-solid fa-check"></i> Seus ganhos estão seguros</p>
+                    <p><i class="fa-solid fa-check"></i> Entre quando quiser</p>
+                    <p><i class="fa-solid fa-check"></i> Pagamentos via pix</p>
+                </div>
+                <div class="flex-item">
+                    <h3>VANTAGENS DA PLATAFORMA</h3>
+                    <p>Todos os processos e atividades no site são extremamente rápidos e sem burocracia!</p>
+                    <p><i class="fa-solid fa-check"></i> Plataforma rápida</p>
+                    <p><i class="fa-solid fa-check"></i> Design elegante</p>
+                    <p><i class="fa-solid fa-check"></i> Saques 100% grátis</p>
+                    <p><i class="fa-solid fa-check"></i> Limite alto de cliques</p>
+                </div>
+                <div class="flex-item">
+                    <h3>RESGATAR GANHOS</h3>
+                    <p>Até o momento estão disponíveis 3 formas de resgate sendo elas através do Picpay, PayPal e Pix</p>
+                    <div id="pagamentoicons">
+                        <img src="{% static 'index/img/ppay-icon.png' %}" alt="" srcset="">
+                        <img src="{% static 'index/img/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png' %}" alt="" srcset="">
+                        <img src="{% static 'index/img/transferir.png' %}" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-3">
+        <div class="container">
+            <div class="flex-item other">
+                <h3>Inicie agora e receba um bônus</h3>
+                <p>Ao criar uma conta na plataforma você receberá um bônus de <strong>R$ 5,00</strong> para que fique motivado, mas lembre-se que está oferta é limitada e a qualquer momento poderá ser desfeita.</p>
+                <a href="{% url 'register' %}">CRIAR CONTA</a>
+            </div>
+            <div class="flex-item">
+                <h3>Estatísticas Mensais</h3>
+                <p>Todos os meses coletamos algumas informações sobre o crescimento da plataforma. Veja abaixo!</p>
+                <div class="container-flex-item-infos">
+                    <div class="flex-item-infos">
+                        <i class="fa-solid fa-users"></i>
+                        <span>+ 10K</span>
+                        <p>Usuários</p>
+                    </div>
+                    <div class="flex-item-infos">
+                        <i class="fa-solid fa-audio-description"></i>
+                        <span>+ 100K</span>
+                        <p>Propaganda</p>
+                    </div>
+                    <div class="flex-item-infos">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <span>+ 568K</span>
+                        <p>Retirada</p>
+                    </div>
+                    <div class="flex-item-infos">
+                        <i class="fa-solid fa-handshake-simple"></i>
+                        <span>+ 322K</span>
+                        <p>Parcerias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-5">
+        <div class="container">
+            <div class="flex-title">
+                <h3>Feedback de nossos usuários</h3>
+                <p>Veja abaixo alguns feedbacks dos usuários da plataforma</p>
+            </div>
+            <div class="flex-item-container">
+                <div class="flex-item">
+                    <img src="{% static 'index/img/29595526_1722049621195746_2046606512573510321_n-jpg.jpg' %}" alt="" srcset="">
+                    <h4>MARCELO ALVES</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <em>Estou gostando muito da plataforma, já fiz vários saques e todos caíram certinho na data informada. Realmente tudo é bem intuitivo e fácil de utilizar, pelo visto todos os anúncios são rápidos e bem organizados.</em>
+                </div>
+                <div class="flex-item">
+                    <img src="{% static 'index/img/dfgdgdg.png' %}" alt="" srcset="">
+                    <h4>MARIANA SILVEIRA</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <em>Excelente fonte de renda extra!</em>
+                </div>
+                <div class="flex-item">
+                    <img src="{% static 'index/img/fdgdgfd.png' %}" alt="" srcset="">
+                    <h4>DANIELLE SOUSA</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <em>Quando o pagamento caiu fiquei mutio feliz!!</em>
+                </div>
+                <div class="flex-item">
+                    <img src="{% static 'index/img/dsfsfsfsdfg.png' %}" alt="" srcset="">
+                    <h4>MATHEUS VENANCIO</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <em>Muito boa a plataforma!!</em>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'index/common-questions.html' %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'index/js/index.js' %}"></script>
+{% endblock %}

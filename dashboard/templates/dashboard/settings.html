@@ -1,0 +1,122 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% load djmoney %}
+
+{% block title %}Settings{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'dashboard/css/settings.css' %}">
+{% endblock %}
+
+{% block body %}
+    <section id="section-2">
+        <div class="container">
+            <form action="" method="post" id="form-profile">
+                {% csrf_token %}
+                <div class="flex-card">
+                    <div class="flex-title">
+                        <h3>Configurações do perfil</h3>
+                    </div>
+                    <div class="flex-content">
+                        <div class="flex-item">
+                            <label for="first_name">Nome</label>
+                            <input type="text" name="first_name" id="first_name" minlength="1" value="{{request.user.first_name}}">
+                            <span id="first-name-message" class="msg-error-text"></span>
+                        </div>
+                        <div class="flex-item">
+                            <label for="last_name">Sobrenome</label>
+                            <input type="text" name="last_name" id="last_name" minlength="1" value="{{request.user.last_name}}">
+                            <span id="last-name-message" class="msg-error-text"></span>
+                        </div>
+                        <div class="flex-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" value="{{request.user.email}}" readonly required>
+                        </div>
+                        <div class="flex-item">
+                            <i class="fa-solid fa-user"></i>
+                            <label for="username">Usuário</label>
+                            <input type="text" name="username" id="username" value="{{request.user.username}}" readonly required>
+                        </div>
+                    </div>
+                    <input type="submit" value="Atualizar" name="form-profile">
+                </div>
+            </form>
+            <form action="" method="post" id="form-safety">
+                {% csrf_token %}
+                <div class="flex-card">
+                    <div class="flex-title">
+                        <h3>Configurações de segurança</h3>
+                    </div>
+                    <div class="flex-content">
+                        <div class="flex-item">
+                            <i class="fa-solid fa-eye"></i>
+                            <label for="current-password">Senha atual</label>
+                            <input type="password" name="current_password" id="current_password" minlength="8" maxlength="20">
+                            <span id="current-password_message" class="msg-error-text"></span>
+                        </div>
+                        <div class="flex-item">
+                            <i class="fa-solid fa-key"></i>
+                            <label for="password1">Nova senha</label>
+                            <input type="password" name="password1" id="password1" minlength="8" maxlength="20">
+                            <span id="password1-message" class="msg-error-text"></span>
+                        </div>
+                        <div class="flex-item">
+                            <i class="fa-solid fa-key"></i>
+                            <label for="password2">Confirmar senha</label>
+                            <input type="password" name="password2" id="password2" minlength="8" maxlength="20">
+                            <span id="password2-message" class="msg-error-text"></span>
+                        </div>
+                    </div>
+                    <input type="submit" value="Alterar a senha" name="form-safety">
+                </div>
+            </form>
+            <form action="" method="post" id="form-payment-method">
+                {% csrf_token %}
+                <div class="flex-card flex-payment-method">
+                    <div class="flex-title">
+                        <h3>Método de pagamento padrão</h3>
+                    </div>
+                    <div class="flex-content">
+                        <div class="flex-item">
+                            <label for="pay-method">Selecione uma opção</label>
+                            <select name="pay-method" id="pay-method">
+                                {% if request.user.wallet.payment_method == '0' %}
+                                    <option value="PicPay" selected>PicPay</option>
+                                    <option value="PayPal">PayPal</option>
+                                    <option value="Pix">Pix</option>
+                                {% elif request.user.wallet.payment_method == '1' %}
+                                    <option value="PicPay">PicPay</option>
+                                    <option value="PayPal" selected>PayPal</option>
+                                    <option value="Pix">Pix</option>
+                                {% elif request.user.wallet.payment_method == '2' %}
+                                    <option value="PicPay">PicPay</option>
+                                    <option value="PayPal">PayPal</option>
+                                    <option value="Pix" selected>Pix</option>
+                                {% else %}
+                                    <option value="PicPay" selected>PicPay</option>
+                                    <option value="PayPal">PayPal</option>
+                                    <option value="Pix">Pix</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                        <div class="flex-item">
+                            {% if request.user.wallet.payment_key %}
+                                <input type="text" name="payment-data" id="payment-data" placeholder="E-mail" value="{{request.user.wallet.payment_key}}">
+                            {% else %}
+                                <input type="text" name="payment-data" id="payment-data" placeholder="E-mail">
+                            {% endif %}
+                            <span id="payment-data-message" class="msg-error-text"></span>
+                        </div>
+                    </div>
+                    <input type="submit" value="Salvar" name="form-payment-method">
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'dashboard/js/settings.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}

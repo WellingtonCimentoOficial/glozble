@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'index/img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'index/css/spinner.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/default_dashboard.css' %}">
+    {% block head %}{% endblock %}
+    <title>EDITAR | {% block title%}{% endblock %}</title>
+</head>
+<body>
+    <div class="flex-menu"><i class="fa-solid fa-bars"></i></div>
+    <div id="spinner-loading"><img src="{% static 'index/img/spinner.gif' %}"></div>
+    <section id="section-1">
+        <div class="container">
+            <div class="flex-item">
+                <a href="{% url 'dashboard' %}"><img id="logo" src="{% static 'index/img/logo-title-transparent.png' %}"></a>
+                <p>Ganhe dinheiro com anúncios</p>
+            </div>
+            <ul class="flex-item-container">
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="{% url 'dashboard' %}">PÁGINA INICIAL</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-audio-description"></i>
+                    <a href="{% url 'ad' %}">CLICAR EM ANÚNCIOS</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-wallet"></i>
+                    <a href="{% url 'withdraw' %}">RESGATAR DINHEIRO</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-hand-holding-hand"></i>
+                    <a href="{% url 'help' %}">AJUDA</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <a href="">COMPARTILHAR</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="{% url 'settings' %}">CONFIGURAÇÕES</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="flex-logout">
+        <div class="flex-item">
+            <div class="logout-image">
+                <span>Olá, {{ request.user.username }}</span>
+                <img src="{% static 'dashboard/img/profile.jpg' %}" alt="" srcset="">
+            </div>
+            <div class="logout-opcoes">
+                <a href="{% url 'settings' %}">Configurações</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+        </div>
+    </section>
+    {% block body %}
+    {% endblock %}
+    <footer>
+        <div class="container">
+            <div class="flex-item">
+                <span id="footer-text"></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google tag (gtag.js) google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOURID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOURID');
+    </script>
+    <!--end-->
+    
+    <script src="{% static 'index/js/default.js' %}"></script>
+    <script src="{% static 'dashboard/js/default_dashboard.js' %}"></script>
+    <script src="https://kit.fontawesome.com/32e61be44a.js" crossorigin="anonymous"></script>
+    {% block script %}
+    {% endblock %}
+</body>
+</html>
