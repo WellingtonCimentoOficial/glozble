@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --roxo-principal: rgb(132, 0, 255);
+    --preto: #363636;
+    --input-border: #e5e5e5;
+    --input-border-focus:#c0c0c0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+/*----------OTHERS---------*/
+.input-incorrect {
+    border-color: red;
+}
+.input-incorrect:focus {
+    border-color: red;
+}
+.msg-error-text {
+    display: block;
+    color: red;
+    margin: 5px auto auto auto;
+}
+
+header {
+    width: 100%;
+    background-color:var(--roxo-principal);
+}
+header div.container {
+    width: 70%;
+    margin: auto;
+    /*background-color: red;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px 30px 0px;
+}
+header div.container div.flex-logo a {
+    text-decoration: none;
+}
+#logo {
+    width: 150px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+header div.container nav.flex-item ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: green;*/
+    list-style: none;
+}
+header div.container nav.flex-item ul li a {
+    text-decoration: none;
+    transition: 1s;
+    text-align: center;
+    color: white;
+    margin-right: 30px;
+}
+header div.container nav.flex-item ul li a:hover {
+    color: rgb(226, 226, 226);
+}
+#sign-button {
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 0.5s;
+    background-color: white;
+    color: var(--roxo-principal);
+    margin: 0;
+}
+#sign-button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+/*--------FLEX-MENU---------*/
+div.flex-menu {
+    display: none;
+    cursor: pointer;
+}
+div.flex-menu i {
+    font-size: 23pt;
+    color: white;
+}
+
+/*--------OTHERS-----------*/
+.stop-scrolling {
+    overflow: hidden;
+}
+.stop-interaction {
+    pointer-events: none;
+}
+
+/*----------------footer-----------------*/
+footer {
+    background-color: var(--roxo-principal);
+}
+footer div.container {
+    width: 70%;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer div.container div.flex-item span {
+    color: white;
+}
+
+/*-----------------RESPONSIVE-----------------*/
+@media (max-width: 1310px){
+    html, body {
+        overflow: visible;
+    }
+}
+@media (max-width: 1050px){
+    header div.container {
+        width: 95%;
+    }
+}
+@media (max-width: 750px){
+    header div.container {
+        padding: 15px 0px;
+    }
+    header div.container nav.flex-item ul {
+        background-color: var(--roxo-principal);
+        height: 100vh;
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 65%;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header div.container nav.flex-item ul li {
+        margin: 20px 0px;
+        padding: 0px 0px;
+    }
+    header div.container nav.flex-item ul li a {
+        margin: auto;
+    }
+    div.flex-menu {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        z-index: 2;
+    }
+}

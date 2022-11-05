@@ -1,0 +1,128 @@
+
+
+/*-----------------SECTION-1--------------*/
+#section-1 {
+    background-color: var(--roxo-principal);
+    height: 50vh;
+    display: flex;
+}
+#section-1 div.container {
+    /*background-color: green;*/
+    width: 70%;
+    margin: auto;
+}
+#section-1 div.container div.flex-item h2 {
+    
+    color: white;
+    font-size: 30pt;
+}
+#section-1 div.container div.flex-item p {
+
+    color: white;
+    font-size: 13pt
+}
+
+/*-----------------SECTION-2--------------*/
+#section-2 {
+    /*background-color: red;*/
+    color: var(--preto);
+}
+#section-2 div.container {
+    /*background-color: gold;*/
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+}
+#section-2 div.container div.flex-title {
+    /*background-color: blue;*/
+    padding-bottom: 30px;
+    text-align: center;
+}
+#section-2 div.container div.flex-title h2 {
+    font-size: 25pt;
+}
+#section-2 div.container div.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+#section-2 div.container div.flex-container div.flex-item-container {
+    /*background-color: chartreuse;*/
+    width: 400px;
+    margin: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+#section-2 div.container div.flex-container div.flex-item-container h3 {
+    font-size: 20pt;
+    text-align: center;
+}
+#section-2 div.container div.flex-container div.flex-item-container p {
+    font-size: 13pt;
+    text-align: center;
+    padding: 10px 0px;
+}
+#section-2 div.container div.flex-container div.flex-item-container div.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#section-2 div.container div.flex-container div.flex-item-container div.flex-item span {
+    font-size: 13pt;
+    padding: 3px 0px;
+    font-weight: 500;
+}
+#section-2 div.container div.flex-container div.flex-item-container span.plan-value {
+    display: block;
+    font-weight: 900;
+    font-size: 20pt;
+    text-align: center;
+    padding: 10px 0px;
+}
+#section-2 div.container div.flex-container div.flex-item-container a.assinar {
+    text-decoration: none;
+    background-color: var(--roxo-principal);
+    color: white;
+    font-size: 15pt;
+    text-align: center;
+    padding: 5px 10px;
+    border: 2px solid var(--roxo-principal);
+    transition: 0.5s;
+}
+#section-2 div.container div.flex-container div.flex-item-container a.assinar:hover {
+    background-color: white;
+    color: var(--roxo-principal);
+}
+
+
+/*------------------RESPONSIVE-------------------*/
+@media (max-width: 1315px) {
+    #section-2 div.container {
+        padding: 30px 0px;
+    }
+    #section-2 div.container div.flex-container div.flex-item-container {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    
+}
+
+@media (max-width: 750px) {
+    #section-1 div.container {
+        width: 95%;
+    }
+    #section-1 div.container div.flex-item h2 {
+        font-size: 25pt;
+    }
+    #section-2 div.container {
+        width: 95%;
+        padding: 30px 0px;
+    }
+    
+}

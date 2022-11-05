@@ -1,0 +1,143 @@
+
+
+/*--------------SECTION 1---------------*/
+#section-1 {
+    color: var(--preto);
+}
+#section-1 div.container {
+    /*background-color: red;*/
+    padding: 100px 0px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#section-1 div.container div.flex-item {
+    display: flex;
+    flex-direction: column;
+}
+#section-1 div.container div.flex-item h2 {
+    text-align: center;
+    font-size: 30pt;
+}
+#section-1 div.container div.flex-item p {
+    max-width: 800px;
+    font-size: 13pt;
+}
+
+/*--------------SECTION 2---------------*/
+#section-2 {
+    background-color: var(--roxo-principal);
+    color: white;
+}
+#section-2 div.container {
+    padding: 100px 0px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#section-2 div.container div.flex-item {
+    display: flex;
+    flex-direction: column;
+}
+#section-2 div.container div.flex-item h2 {
+    text-align: center;
+    font-size: 30pt;
+}
+#section-2 div.container div.flex-item p {
+    max-width: 800px;
+    font-size: 13pt;
+}
+
+/*--------------SECTION 3---------------*/
+#section-3 {
+    color: var(--preto);
+    padding: 50px 0px;
+}
+#section-3 div.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#section-3 div.container div.flex-item {
+    display: flex;
+    flex-direction: column;
+}
+#section-3 div.container div.flex-item h2 {
+    text-align: center;
+    font-size: 30pt;
+}
+#section-3 div.container div.flex-item p {
+    max-width: 800px;
+    font-size: 13pt;
+}
+
+.img {
+    width: 450px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+/*----------BOTÃO PRIMEIROS PASSOS------------*/
+a.btn-first-steps {
+    color: var(--roxo-principal);
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid var(--roxo-principal);
+    margin: 20px 0px;
+    text-align: center;
+    transition: 0.5s;
+}
+a.btn-first-steps:hover {
+    background-color: var(--roxo-principal);
+    color: white;
+}
+a.btn-first-steps-white {
+    color: white;
+    border-color: white;
+}
+a.btn-first-steps-white:hover {
+    background-color: white;
+    color: var(--roxo-principal);
+}
+
+
+/*--------------RESPONSIVE--------------*/
+@media (max-width: 1600px) {
+    #section-1 div.container, #section-2 div.container, #section-3 div.container {
+        width: 95%;
+    }
+}
+@media (max-width: 1315px) {
+    #section-1 div.container, #section-2 div.container, #section-3 div.container {
+        width: 95%;
+        height: auto;
+        justify-content: center;
+        padding: 40px 0px;
+    }
+    .img {
+        margin: 20px 0px;
+    }
+    #section-1 div.container div.flex-item p, #section-2 div.container div.flex-item p, #section-3 div.container div.flex-item p {
+        max-width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    #section-1 div.container div.flex-item h2, #section-2 div.container div.flex-item h2, #section-3 div.container div.flex-item h2 {
+        font-size: 20pt;
+    }
+}
+@media (max-width: 450px) {
+    .img {
+        width: 90%;
+    }
+}

@@ -1,0 +1,371 @@
+/*----------------section1-----------------*/
+#section-1 {
+    background-color: var(--roxo-principal);
+    height: 70vh;
+    display: flex;
+}
+#section-1 div.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: green;*/
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+}
+#section-1 div.container div.flex-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#section-1 div.container div.flex-item h2 {
+    font-size: 30pt;
+    color: white;
+}
+#section-1 div.container div.flex-item p {
+    color: white;
+    padding: 10px 0px;
+    font-size: 14pt;
+}
+#section-1 div.container div.flex-item a {
+    padding: 10px 20px 10px 20px;
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    align-self: center;
+    margin: 10px 0px;
+    transition: 0.5s;
+}
+#section-1 div.container div.flex-item a:hover {
+    color: var(--roxo-principal);
+    background-color: white;
+}
+
+/*----------------section2-----------------*/
+#section-2 {
+    /*background-color: blue;*/
+}
+#section-2 div.container {
+    width: 95%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+#section-2 div.container div.flex-header {
+    margin: auto;
+    padding: 50px 0px;
+    max-width: 1000px;
+    /*background-color: aqua;*/
+}
+#section-2 div.container div.flex-header h2 {
+    text-align: center;
+    font-size: 25pt;
+    color: var(--preto);
+}
+#section-2 div.container div.flex-header p {
+    text-align: center;
+    font-size: 14pt;
+    padding: 10px 0px;
+}
+#section-2 div.container div.flex-item-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#section-2 div.container div.flex-item-container div.flex-item {
+    max-width: calc(100% / 3);
+    margin: 10px;
+    padding: 50px 25px;
+    /*background-color: green;*/
+    color: var(--preto);
+    -webkit-box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.178);
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.178);
+    cursor: pointer;
+    transition: 1s;
+}
+#section-2 div.container div.flex-item-container div.flex-item:hover {
+    transform: scale(1.01);
+}
+#section-2 div.container div.flex-item-container div.flex-item h3 {
+    text-align: center;
+    font-size: 20pt;
+    padding: 10px 0px;
+}
+#section-2 div.container div.flex-item-container div.flex-item p {
+    font-size: 14pt;
+    padding: 10px 0px;
+}
+#section-2 div.container div.flex-item-container div.flex-item p i {
+    font-size: 20pt;
+    color: var(--roxo-principal);
+}
+#section-2 div.container div.flex-item-container div.flex-item #pagamentoicons {
+    display: flex;
+    justify-content: center;
+}
+#section-2 div.container div.flex-item-container div.flex-item #pagamentoicons img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+/*----------------section3-----------------*/
+#section-3 {
+    /*background-color: var(--roxo-principal);*/
+    display: flex;
+}
+#section-3 div.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: var(--preto);
+}
+#section-3 div.container div.flex-item {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 50px 80px;
+}
+#section-3 div.container div.flex-item h3 {
+    font-size: 25pt;
+    font-weight: 700;
+    text-align: center;
+}
+#section-3 div.container div.flex-item p {
+    font-size: 14pt;
+    text-align: center;
+}
+#section-3 div.container div.flex-item div.container-flex-item-infos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+#section-3 div.container div.flex-item div.container-flex-item-infos div.flex-item-infos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+}
+#section-3 div.container div.flex-item div.container-flex-item-infos div.flex-item-infos i {
+    font-size: 40pt;
+}
+#section-3 div.container div.flex-item div.container-flex-item-infos div.flex-item-infos span {
+    font-size: 30pt;
+    font-weight: 700;
+}
+#section-3 div.container div.other {
+    background-color: var(--roxo-principal);
+    height: 50vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#section-3 div.container div.other p {
+    max-width: 50vw;
+}
+#section-3 div.container div.other a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 50px;
+    margin-top: 20px;
+    transition: 1s;
+}
+#section-3 div.container div.other a:hover {
+    background-color: white;
+    color: var(--roxo-principal);
+}
+
+/*----------------section4-----------------*/
+#section-common-questions {
+    /*background-color: rgb(202, 144, 17);*/
+}
+#section-common-questions div.container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--preto);
+    padding-bottom: 50px;
+}
+#section-common-questions div.container div.flex-item {
+    padding: 50px 0px;
+    max-width: 1000px;
+}
+#section-common-questions div.container div.flex-item h3 {
+    text-align: center;
+    font-size: 25pt;
+}
+#section-common-questions div.container div.flex-item p {
+    font-size: 14pt;
+    padding: 10px 0px;
+}
+#section-common-questions div.container div.flex-item-container div.flex-item {
+    -webkit-box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.178);
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.178);
+    margin: 20px 0px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+#section-common-questions div.container div.flex-item-container div.flex-item p {
+    display: none;
+    cursor: auto;
+}
+#section-common-questions div.container div.flex-item-container div.flex-item div.flex-title  {
+    display: flex;
+    align-items: center;
+}
+#section-common-questions div.container div.flex-item-container div.flex-item div.flex-title i {
+    font-size: 20pt;
+}
+#section-common-questions div.container div.flex-item-container div.flex-item div.flex-title h4 {
+    font-size: 18pt;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+/*----------------section5-----------------*/
+#section-5 {
+    /*background-color: green;*/
+    padding: 50px 0px;
+    color: var(--preto);
+}
+#section-5 div.container div.flex-title {
+    text-align: center;
+    padding: 50px 0px;
+}
+#section-5 div.container div.flex-title h3 {
+    font-size: 25pt;
+}
+#section-5 div.container div.flex-title p {
+    font-size: 14pt;
+    padding: 10px 0px;
+}
+#section-5 div.container div.flex-item-container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+#section-5 div.container div.flex-item-container div.flex-item {
+    text-align: center;
+    margin: 10px;
+    padding: 30px;
+    -webkit-box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.178);
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.178);
+    cursor: pointer;
+    transition: 1s;
+    flex-grow: 1;
+}
+#section-5 div.container div.flex-item-container div.flex-item:hover {
+    transform: scale(1.05, 1.05);
+}
+#section-5 div.container div.flex-item-container div.flex-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+#section-5 div.container div.flex-item-container div.flex-item h4 {
+    font-size: 18pt;
+}
+#section-5 div.container div.flex-item-container div.flex-item div.stars {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+#section-5 div.container div.flex-item-container div.flex-item div.stars i {
+    font-size: 18pt;
+    color: rgb(236, 236, 12);
+}
+
+
+/*------------------RESPONSIVE-------------------*/
+@media (max-width: 1500px) {
+    #section-3 div.container {
+        flex-wrap: wrap;
+    }
+    #section-3 div.container div.flex-item {
+        padding: 50px 0px;
+        width: 95%;
+    }
+    #section-3 div.container div.other {
+        width: 100%;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #section-5 div.container div.flex-title {
+        width: 95%;
+        margin: auto;
+    }
+    #section-common-questions div.container {
+        width: 95%;
+    }
+    #section-2 div.container div.flex-item-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #section-2 div.container div.flex-item-container div.flex-item {
+        min-width: 100%;
+        margin: 10px auto;
+    }
+    #section-3 div.container div.other p {
+        max-width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    #section-2 div.container div.flex-item-container {
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    #section-2 div.container div.flex-item-container div.flex-item {
+        min-width: 90%;
+        margin: 20px 10px;
+    }
+    #section-2 div.container div.flex-item-container div.flex-item:hover {
+        transform: scale(1);
+    }
+    #section-5 div.container div.flex-item-container {
+        width: 95%;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        justify-content: space-between;
+    }
+    #section-5 div.container div.flex-item-container div.flex-item {
+        min-width: 95%;
+        margin: 20px 10px;
+    }
+    #section-5 div.container div.flex-item-container div.flex-item:hover {
+        transform: scale(1);
+    }
+    #section-1 div.container div.flex-item h2, #section-2 div.container div.flex-header h2, #section-3 div.container div.flex-item h3, #section-common-questions div.container div.flex-item h3, #section-5 div.container div.flex-title h3 {
+        font-size: 23pt;
+    }
+    #section-common-questions div.container div.flex-item-container div.flex-item div.flex-title h4 {
+        font-size: 15pt;
+    }
+    #section-2 div.container div.flex-item-container div.flex-item p {
+        padding: 5px 0px;
+    }
+    #section-2 div.container div.flex-item-container div.flex-item p:first-child {
+        padding: 10px 0px;
+    }
+    #section-3 div.container div.flex-item div.container-flex-item-infos div.flex-item-infos {
+        width: 50%;
+    }
+    #section-3 div.container div.flex-item div.container-flex-item-infos div.flex-item-infos span {
+        font-size: 20pt;
+    }
+    
+}

@@ -1,0 +1,179 @@
+body, html {
+    overflow-x: hidden;
+}
+
+/*----------------section1-----------------*/
+#section-1 {
+    background-color: var(--roxo-principal);
+    color: var(--preto);
+    height: auto;
+}
+#section-1 div.container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+#section-1 div.container div.flex-item-container {
+    background-color: white;
+    -webkit-box-shadow: 0 0 12px -6px rgb(0 0 0 / 75%);
+    box-shadow: 0 0 12px -6px rgb(0 0 0 / 75%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 40px;
+    width: 550px;
+    max-width: 600px;
+    margin: 25px 20px;
+}
+#section-1 div.container div.flex-item-container div.flex-item {
+    /*background-color: aqua;*/
+}
+#section-1 div.container div.flex-item-container div.flex-item h2 {
+    text-align: center;
+}
+#section-1 div.container div.flex-item-container div.flex-item p {
+    margin: 10px 0px;
+    text-align: center;
+}
+#section-1 div.container div.flex-item-container form {
+    display: flex;
+    flex-direction: column;
+}
+#section-1 div.container div.flex-item-container form div.flex-item {
+    position: relative;
+}
+#section-1 div.container div.flex-item-container form div.flex-item i {
+    position: absolute;
+    font-size: 20pt;
+    top: 6px;
+    margin-left: 10px;
+    color: var(--preto);
+}
+#section-1 div.container div.flex-item-container form span {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+#section-1 div.container div.flex-item-container form input[type=text], #section-1 div.container div.flex-item-container form input[type=email], #section-1 div.container div.flex-item-container form input[type=password] {
+    padding: 8px 42px;
+    font-size: 13pt;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    width: 100%;
+    color: var(--preto);
+}
+#section-1 div.container div.flex-item-container form div.flex-item span.msg-error-text {
+    display: block;
+    color: red;
+    margin-top: 5px;
+}
+#section-1 div.container div.flex-item-container form input[type=text]:focus, #section-1 div.container div.flex-item-container form input[type=email]:focus, #section-1 div.container div.flex-item-container form input[type=password]:focus {
+    outline: 0;
+    border: 1px solid #c0c0c0;
+}
+#section-1 div.container div.flex-item-container form input[type=submit] {
+    padding: 8px;
+    font-size: 13pt;
+    border: 0;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: var(--roxo-principal);
+    color: white;
+    border: 2px solid var(--roxo-principal);
+    transition: 0.5s;
+}
+#section-1 div.container div.flex-item-container form input[type=submit]:hover {
+    background-color: white;
+    color: var(--roxo-principal);
+    border: 2px solid var(--roxo-principal);
+}
+#section-1 div.container div.flex-item-container form div.flex-terms {
+    margin-top: 25px;
+    border: 1px solid transparent;
+}
+#section-1 div.container div.flex-item-container form div.flex-terms input[type=checkbox] {
+    border: 0;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: var(--roxo-principal);
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    pointer-events: none;
+    font-weight: 500;
+}
+.message-success {
+    background-color: rgb(54, 177, 54);
+    color: white;
+}
+.message-error {
+    background-color: rgb(247, 45, 45);
+    color: white;
+}
+
+div#captcha-login, div#captcha-register {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    width: 304px;
+}
+
+
+/*-----------------RESPONSIVE-----------------*/
+@media (max-width: 1500px){
+    #section-1 div.container {
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+    #section-1 div.container div.flex-item-container {
+        max-width: 100%;
+        width: 100%;
+    }
+    body, html {
+        overflow-y: scroll;
+    }
+}
+@media (max-width: 1310px){
+    #section-1 {
+        height: 100vh;
+    }
+    
+}
+@media (max-width: 1000px){
+    #section-1 div.container {
+        max-width: 100%;
+        width: 95%;
+    }
+    #section-1 div.container div.flex-item-container {
+        margin: 0px;
+    }
+}
+/*-------CAPTCHA STYLE------*/
+@media (max-width: 402px) {
+    
+    div#captcha-login, div#captcha-register {
+        transform: scale(0.9);
+        transform-origin:0 0;
+    }
+}
+@media (max-width: 370px) {
+    div#captcha-login, div#captcha-register {
+        transform: scale(0.8);
+        transform-origin:0 0;
+    }
+}
+@media (max-width: 340px) {
+    div#captcha-login, div#captcha-register {
+        transform: scale(0.7);
+        transform-origin:0 0;
+    }
+}

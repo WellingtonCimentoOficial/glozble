@@ -1,0 +1,290 @@
+
+
+/*--------------SCROLL BAR ---------------*/
+::-webkit-scrollbar {
+    background: transparent;
+}
+
+
+/*-----------------section2------------------*/
+#section-2 {
+    /*background-color: aqua;*/
+    margin-left: 350px;
+    padding: 65px 0px 0px 0px;
+}
+#section-2 div.container-geral {
+    /*background-color: chartreuse;*/
+    width: 95%;
+    margin: auto;
+    -webkit-box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26); 
+    box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26);
+    border-radius: 10px;
+    padding: 30px;
+}
+#section-2 div.container-geral div.flex-item h3 {
+    text-align: center;
+    padding-bottom: 15px;
+    color: var(--preto);
+    font-size: 18pt;
+}
+#section-2 div.container-geral div.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#section-2 div.container-geral div.container a.flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--roxo-principal);
+    padding: 50px 0px;
+    width: 430px;
+    text-decoration: none;
+    transition: 1s;
+    white-space: nowrap;
+}
+#section-2 div.container-geral div.container a.flex-item:hover {
+    transform: scale(1.03, 1.03);
+}
+#section-2 div.container-geral div.container a.flex-item i {
+    font-size: 25pt;
+    color: white;
+}
+#section-2 div.container-geral div.container a.flex-item span {
+    color: white;
+}
+#section-2 div.container-geral div.container a.flex-item span.number-display {
+    font-size: 20pt;
+    font-weight: 900;
+}
+
+/*-----------------section3------------------*/
+#section-3 {
+    color: var(--preto);
+    /*background-color: red;*/
+    margin-left: 350px;
+    padding: 20px 40px;
+}
+#section-3 div.container {
+    width: 100%;
+    /*background-color: green;*/
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#section-3 div.container div.flex-item-container {
+    /*background-color: aqua;*/
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26); 
+    box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26);
+    padding: 30px;
+}
+.table {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+#flex-table {
+    width: 60%;
+}
+#flex-table div.flex-item h3 {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18pt;
+}
+#flex-table table {
+    width: 100%;
+    text-align: center;
+}
+#flex-withdraw {
+    /*background-color: var(--roxo-principal);*/
+    width: 39%;
+    margin-left: 1%;
+}
+#flex-withdraw div.flex-item h3 {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18pt;
+}
+#flex-withdraw div.flex-item table {
+    text-align: center;
+    width: 100%;
+}
+td, th {
+    white-space: nowrap;
+}
+
+/*-----------------section4(GRÁFICO)------------------*/
+#section-4 {
+    /*background-color: coral;*/
+    margin-left: 350px;
+    padding: 0px 40px;
+}
+#section-4 div.container {
+    /*background-color: blue;*/
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26); 
+    box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26);
+    padding: 30px;
+}
+#section-4 div.container div.flex-item {
+    position: relative;
+    width: 70%;
+    margin: auto;
+}
+#section-4 div.container div.flex-item h3 {
+    text-align: center;
+    padding: 10px 0px;
+    color: var(--preto);
+    font-size: 18pt;
+}
+
+/*-----------------section4------------------*/
+#section-5 {
+    margin-left: 350px;
+    padding: 20px 40px;
+    color: white;
+}
+#section-5 div.container {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26); 
+    box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26);
+    padding: 30px;
+}
+#section-5 div.container div.flex-item h3 {
+    text-align: center;
+    padding-bottom: 15px;
+    color: var(--preto);
+    font-size: 18pt;
+}
+#section-5 div.container div.flex-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#section-5 div.container div.flex-item-container div.flex-item {
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--roxo-principal);
+    -webkit-box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26); 
+    box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26);
+}
+#section-5 div.container div.flex-item-container div.flex-item h4 {
+    font-size: 20pt;
+    cursor: default;
+    text-align: center;
+}
+#section-5 div.container div.flex-item-container div.flex-item i {
+    font-size: 50pt;
+    margin: 30px 0px;
+}
+#section-5 div.container div.flex-item-container div.flex-item p {
+    margin-bottom: 30px;
+    cursor: default;
+}
+#section-5 div.container div.flex-item-container div.flex-item span {
+    cursor: default;
+}
+#section-5 div.container div.flex-item-container div.flex-item span.dest-money {
+    font-weight: 900;
+    font-size: 20pt;
+}
+
+
+/*-------------RESPONSIVE-------------*/
+@media (max-width: 1772px) {
+    #section-2 div.container-geral {
+        padding: 0px;
+        -webkit-box-shadow: none; 
+        box-shadow: none;
+    }
+    #section-2 div.container-geral div.flex-item h3 {
+        display: none;
+    }
+    #section-2 div.container-geral div.container {
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    #section-2 div.container-geral div.container a.flex-item {
+        margin: 0px 20px;
+    }
+    
+}
+@media (max-width: 1690px) {
+    #section-5 div.container div.flex-item-container div.flex-item {
+        flex-grow: 1;
+        margin: 5px;
+    }
+}
+@media (max-width: 1200px) {
+    #section-2, #section-3, #section-4, #section-5 {
+        margin-left: 50px;
+    }
+    #section-3 div.container div.flex-item-container {
+        width: 100%;
+    }
+    #flex-withdraw {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    #section-4 div.container div.flex-item {
+        width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    #section-2, #section-3, #section-4, #section-5 {
+        margin-left: 0px;
+    }
+    #section-3 {
+        padding: 20px 0px;
+    }
+    #section-3 div.container {
+        width: 95%;
+    }
+    #section-4 {
+        padding: 0px;
+    }
+    #section-4 div.container {
+        width: 96%;
+        margin: auto;
+    }
+    #section-5 div.container {
+        width: 95%;
+        margin: auto;
+    }
+    #section-5 {
+        padding: 20px 0px;
+    }
+    #section-5 div.container div.flex-item-container div.flex-item {
+        margin: 5px 0px;
+    }
+    #section-2 div.container-geral div.container a.flex-item {
+        white-space: nowrap;
+        padding: 50px 50px;
+        min-width: 100%;
+        border-radius: 10px;
+        margin: 0px;
+    }
+    #section-2 div.container-geral div.container a.account-money {
+        margin: 0px 20px;
+    }
+
+    #flex-table div.flex-item h3, #section-5 div.container div.flex-item h3, #flex-withdraw div.flex-item h3, #section-4 div.container div.flex-item h3 {
+        font-size: 16pt;
+    }
+    #section-5 div.container div.flex-item-container div.flex-item h4 {
+        font-size: 16pt;
+    }
+    #section-3 div.container div.flex-item-container {
+        padding: 30px 20px;
+    }
+}
+@media (max-width: 600px) {
+    th, td {
+        padding: 0px 20px;
+    }
+}

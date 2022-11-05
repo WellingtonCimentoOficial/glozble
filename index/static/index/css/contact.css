@@ -1,0 +1,146 @@
+
+
+/*-----------------SECTION-1--------------*/
+#section-1 {
+    background-color: var(--roxo-principal);
+    height: 50vh;
+    display: flex;
+}
+#section-1 div.container {
+    /*background-color: green;*/
+    width: 70%;
+    margin: auto;
+}
+#section-1 div.container div.flex-item h2 {
+    color: white;
+    font-size: 30pt;
+}
+#section-1 div.container div.flex-item p {
+    color: white;
+}
+
+/*-----------------SECTION-2--------------*/
+#section-2 {
+    /*background-color: red;*/
+    color: var(--preto);
+}
+#section-2 div.container {
+    padding: 0px 0px;
+    /*background-color: green;*/
+    width: 70%;
+    margin: auto;
+    display: flex;
+}
+#section-2 div.container div.flex-item-container {
+    width: 100%;
+    padding: 30px 0px;
+    /*background-color: pink;*/
+    /*
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);*/
+}
+#section-2 div.container div.flex-item-container div.flex-item h2 {
+    font-size: 25pt;
+    text-align: center;
+}
+#section-2 div.container div.flex-item-container div.flex-item p {
+    padding: 10px 0px;
+}
+#section-2 div.container div.flex-item-container div.flex-item form div.flex-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*background-color: orange;*/
+}
+#section-2 div.container div.flex-item-container div.flex-item form div.flex-item input {
+    width: 600px;
+    padding: 5px 10px;
+    font-size: 13pt;
+}
+#section-2 textarea {
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 12pt;
+}
+input[type=text], input[type=email], textarea {
+    border: 1px solid #e5e5e5;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    outline: 0;
+    border-color: #c0c0c0;
+}
+#section-2 div.container div.flex-item-container div.flex-item form div.flex-break textarea {
+    flex-grow: 1;
+}
+div.flex-break {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+#section-2 input[type=submit] {
+    padding: 6px 30px;
+    border: 2px solid var(--roxo-principal);
+    background-color: var(--roxo-principal);
+    color: white;
+    cursor: pointer;
+    font-size: 13pt;
+    transition: 0.5s;
+    width: 100%;
+}
+#section-2 input[type=submit]:hover {
+    background-color: white;
+    color: var(--roxo-principal);
+}
+
+
+/*---------OTHERS--------*/
+div.flex-message {
+    text-align: center;
+    padding: 30px 0px;
+}
+div.flex-message h2 {
+    font-weight: 300;
+    font-size: 28pt;
+}
+div.flex-message p {
+    padding: 10px 0px;
+}
+div.flex-message i {
+    font-size: 50pt;
+    color: var(--roxo-principal);
+}
+
+/*----------RECAPTCHA-------------*/
+.grecaptcha-badge {
+    display: none;
+}
+
+/*-------------------RESPONSIVE---------------*/
+@media (max-width: 1715px) {
+    #section-2 div.container div.flex-item-container div.flex-item form div.flex-item input {
+        width: 500px;
+    }
+}
+@media (max-width: 1430px) {
+    #section-2 div.container div.flex-item-container div.flex-item form div.flex-item  {
+        flex-direction: column;
+    }
+    #section-2 div.container div.flex-item-container div.flex-item form div.flex-item input {
+        width: 100%;
+    }
+    #section-2 div.container {
+        width: 95%;
+    }
+}
+@media (max-width: 700px) {
+    #section-1 div.container {
+        width: 95%;
+    }
+    #section-1 div.container div.flex-item h2 {
+        font-size: 25pt;
+    }
+    div.flex-message h2 {
+        font-size: 25pt;
+    }
+}

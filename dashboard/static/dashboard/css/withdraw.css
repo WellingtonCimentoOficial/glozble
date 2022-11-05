@@ -1,0 +1,337 @@
+
+/*-------------------POUP UP CONFIRMAÇÃO DE SAQUE-------------------*/
+#withdraw_confirmation {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: var(--preto);
+    width: 500px;
+    padding: 20px;
+    margin-left: calc((110% - 350px)/2);
+    margin-top: 12%;
+    -webkit-box-shadow: 1px 0px 14px 5px rgba(0,0,0,0.4); 
+    box-shadow: 1px 0px 14px 5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+#btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20pt;
+    cursor: pointer;
+    color: var(--roxo-principal);
+}
+#withdraw_confirmation div.container {
+    /*background-color: green;*/
+}
+#withdraw_confirmation div.container div.flex-item {
+    display: flex;
+    flex-direction: column;
+    /*background-color: bisque;*/
+}
+#withdraw_confirmation div.container div.flex-item-payment-poupup div.payment-info {
+    /*background-color: orange;*/
+    margin: 10px 0px;
+}
+#withdraw_confirmation div.container div.flex-item-payment-poupup div.flex-item i {
+    text-align: center;
+    font-size: 50pt;
+}
+#withdraw_confirmation div.container div.flex-item h3 {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18pt;
+    color: var(--roxo-principal);
+}
+#withdraw_confirmation div.container div.flex-item-payment-poupup span{
+    display: flex;
+    padding-bottom: 5px;
+    font-weight: 900;
+    color: var(--roxo-principal);
+}
+#withdraw_confirmation div.container div.flex-item-payment-poupup span p{
+    font-weight: 300;
+    padding-left: 5px;
+    color: var(--preto);
+}
+#withdraw_confirmation div.container div.flex-item-payment-poupup div.flex-buttons {
+    display: flex;
+    justify-content: center;
+    /*background-color: darkorchid;*/
+    margin-top: 10px;
+}
+#withdraw_confirmation div.container div.flex-item-payment-poupup div.flex-buttons button {
+    border: 0;
+    width: 150px;
+    padding: 8px 30px;
+    margin: 10px 10px;
+    font-size: 12pt;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    border-color: var(--roxo-principal);
+    color: var(--roxo-principal);
+    transition: 0.3s;
+    border: 2px solid var(--roxo-principal);
+}
+#withdraw_confirmation div.container div.flex-item-payment-poupup div.flex-buttons button:hover {
+    background-color: var(--roxo-principal);
+    border-color: var(--roxo-principal);
+    color: white;
+}
+#div-messages-poup {
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#div-messages-poup span {
+    text-align: center;
+}
+/*-----------------section2------------------*/
+#section-2 {
+    /*background-color: aqua;*/
+    margin-left: 350px;
+    display: flex;
+    color: var(--preto);
+    padding: 70px 0px 30px 0px;
+}
+#section-2 div.container {
+    width: 90%;
+    margin: auto;
+    /*background-color: firebrick;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#section-2 div.container div.flex-item-saldo {
+    background-color: var(--roxo-principal);
+    color: white;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    /*
+    -webkit-box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26); 
+    box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26);
+    */
+    padding: 20px;
+}
+#section-2 div.container div.flex-item-saldo div.flex-item {
+    /*background-color: var(--roxo-principal);*/
+    margin: auto;
+    line-height: 100%;
+}
+#section-2 div.container div.flex-item-saldo div.flex-item h4 {
+    font-weight: 300;
+    font-size: 13pt;
+}
+#section-2 div.container div.flex-item-saldo div.flex-item i {
+    font-size: 40pt;
+    margin-top: 10px;
+}
+#section-2 div.container div.flex-item-saldo div.flex-item span {
+    font-weight: 900;
+    font-size: 25pt;
+    display: block;
+    padding: 15px 0px;
+}
+#section-2 div.container div.flex-item-pagamento {
+    /*background-color: gold;*/
+    margin: 50px 0px;
+}
+#section-2 div.container div.flex-item-pagamento h2, #section-2 div.container div.flex-item-pagamento p {
+    text-align: center;
+}
+#section-2 div.container div.flex-item-pagamento div.flex-item {
+    margin: 5px 0px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.3s;
+}
+#section-2 div.container div.flex-item-pagamento div.flex-item:hover {
+    -webkit-box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.36); 
+    box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.36);
+}
+#section-2 div.container div.flex-item-pagamento div.flex-item img {
+    width: 40px;
+}
+#section-2 div.container div.flex-item-pagamento div.flex-item span {
+    margin-left: 10px;
+}
+#section-2 div.container div.flex-item-sacar {
+    /*background-color: green;*/
+    margin: 50px 0px;
+}
+#section-2 div.container div.flex-item-sacar h2, #section-2 div.container div.flex-item-sacar p {
+    text-align: center;
+}
+#section-2 div.container div.flex-item-sacar form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#section-2 div.container div.flex-item-sacar form input[type=text] {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 13pt;
+    color: var(--preto);
+}
+#section-2 div.container div.flex-item-sacar form input[type=text]:focus {
+    outline: 0;
+    border: 1px solid #c0c0c0;
+}
+#section-2 div.container div.flex-item-sacar form input[type=submit] {
+    width: 100%;
+    background-color: var(--roxo-principal);
+    color: white;
+    border: 0;
+    padding: 15px 0px;
+    font-size: 13pt;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.msg-error-text {
+    align-self: flex-start;
+}
+#section-2 div.container div.flex-item-compartilhar {
+    /*background-color: gold;*/
+    margin: 50px 0px;
+}
+#section-2 div.container div.flex-item-compartilhar h2 {
+    text-align: center;
+}
+#section-2 div.container div.flex-item-compartilhar div.flex-item {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+#section-2 div.container div.flex-item-compartilhar div.flex-item img {
+    width: 40px;
+    margin: 0px 5px 5px 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#section-2 div.container div.flex-item-compartilhar div.flex-item img:hover {
+    transform: scale(1.1, 1.1);
+}
+#section-2 div.container div.flex-item-compartilhar div.flex-item span {
+    margin-left: 10px;
+}
+
+/*-----------------section3------------------*/
+#section-3 {
+    /*background-color: blue;*/
+    margin-left: 350px;
+    color: var(--preto);
+}
+#section-3 div.container {
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px 50px 50px 50px;
+    -webkit-box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26); 
+    box-shadow: 0px 6px 20px -3px rgba(0,0,0,0.26);
+}
+#section-3 div.container div.flex-item h2 {
+    text-align: center;
+    padding: 20px 0px;
+}
+#section-3 div.container div.flex-item table {
+    width: 100%;
+    text-align: center;
+    cursor: default;
+}
+th {
+    font-size: 14pt;
+    padding: 5px 0px;
+    white-space: nowrap;
+}
+td {
+    white-space: nowrap;
+    padding: 3px 0px;
+}
+tr:nth-child(even), th{
+    background-color: var(--roxo-principal);
+    color: white;
+}
+
+
+/*----------------------RESPONSIVE---------------------*/
+@media (max-width: 1736px) {
+    #section-2 div.container {
+        justify-content: center;
+    }
+}
+@media (max-width: 1200px) {
+    #section-2, #section-3, #withdraw_confirmation {
+        margin-left: 50px;
+    }
+    #withdraw_confirmation {
+        margin-left: calc((60% - 45px)/2);
+        margin-top: 12%;
+    }
+
+}
+@media (max-width: 1400px) {
+    #section-2 div.container div.flex-item-pagamento, #section-2 div.container div.flex-item-sacar {
+        width: 100%;
+    }
+    #section-2 div.container div.flex-item-pagamento div.flex-item {
+        width: 100%;
+    }
+    #section-2 div.container div.flex-item-sacar {
+        margin: 0px;
+    }
+}
+@media (max-width: 1016px) {
+    #section-2 div.container div.flex-item-sacar form input[type=text] {
+        width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    #section-3 div.container div.flex-item {
+        overflow-x: scroll;
+    }
+}
+@media (max-width: 700px) {
+    #section-2, #section-3, #withdraw_confirmation {
+        margin-left: 0px;
+    }
+    #section-2 div.container, #section-3 div.container {
+        width: 95%;
+    }
+    #section-3 div.container {
+        width: 100%;
+        padding: 15px 10px 50px 10px;
+    }
+    #withdraw_confirmation {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+        border-radius: 0;
+    }
+    #btn-close {
+        display: none;
+    }
+    th, td{
+        padding: 0px 10px;
+    }
+}

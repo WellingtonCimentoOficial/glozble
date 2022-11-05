@@ -1,0 +1,154 @@
+
+
+/*----------------SECTION-2--------------*/
+#section-2 {
+    color: var(--preto);
+    margin-left: 350px;
+    /*background-color: orange;*/
+}
+#section-2 div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    /*background-color: green;*/
+}
+#section-2 div.container form div.flex-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    max-width: 750px;
+    padding: 50px 30px;
+    /*background-color: red;*/
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+#section-2 div.container form div.flex-card div.flex-title h3 {
+    text-align: center;
+    font-size: 18pt;
+}
+#section-2 div.container form div.flex-card div.flex-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#section-2 div.container form div.flex-card div.flex-content div.flex-item {
+    width: 50%;
+    padding: 5px;
+    position: relative;
+}
+#section-2 div.container form div.flex-card div.flex-content div.flex-item i {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    font-size: 16pt;
+    cursor: pointer;
+}
+#section-2 div.container form div.flex-card div.flex-content div.flex-item label {
+    display: block;
+    margin-top: 10px;
+}
+#section-2 div.container form div.flex-card div.flex-content div.flex-item input, #section-2 div.container form div.flex-card div.flex-content div.flex-item select {
+    padding: 8px 15px;
+    font-size: 13pt;
+    border: 1px solid var(--input-border);
+    border-radius: 3px;
+    width: 100%;
+    color: var(--preto);
+}
+#section-2 div.container form div.flex-card div.flex-content div.flex-item input#username, #section-2 div.container form div.flex-card div.flex-content div.flex-item input#email, #section-2 div.container form div.flex-card div.flex-content div.flex-item input#current_password, #section-2 div.container form div.flex-card div.flex-content div.flex-item input#password1, #section-2 div.container form div.flex-card div.flex-content div.flex-item input#password2 {
+    padding: 8px 42px;
+}
+#section-2 div.container form div.flex-card div.flex-content div.flex-item input:focus {
+    outline: 0;
+    border: 1px solid var(--input-border-focus);
+}
+
+
+
+/*METÓDO DE PAGAMENTO PADRÃO*/
+#section-2 div.container form div.flex-payment-method  {
+    
+}
+#section-2 div.container form div.flex-payment-method div.flex-content div.flex-item {
+    width: 100%
+}
+#section-2 div.container form div.flex-payment-method div.flex-content div.flex-item input {
+    margin-top: 10px;
+}
+#section-2 div.container form div.flex-payment-method div.flex-content div.flex-item input, #section-2 div.container form div.flex-payment-method div.flex-content div.flex-item select {
+    width: 100%;
+}
+#section-2 div.container form div.flex-payment-method div.flex-content div.flex-item select:focus {
+    outline: 0;
+    border: 1px solid #c0c0c0;
+}
+
+#section-2 div.container form div.flex-payment-method div.flex-content div.flex-item input:hover {
+    outline: 0;
+    border: 1px solid #c0c0c0;
+}
+input[type=submit] {
+    align-self: center;
+    margin-top: 20px;
+    font-size: 13pt;
+    width: 160px;
+    padding: 10px 0px;
+    text-align: center;
+    border: 2px solid var(--roxo-principal);
+    background-color: var(--roxo-principal);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: var(--roxo-principal);
+}
+
+
+/*------------ERRORS------------*/
+#section-2 div.container form div.flex-card div.flex-content div.flex-item input.input-incorrect {
+    border-color: red;
+}
+
+
+/*--------------RESPONSIVO---------------*/
+@media (max-width: 1890px) {
+    #section-2 div.container form {
+        width: 100%;
+    }
+    #section-2 div.container form div.flex-card {
+        max-width: 100%;
+    }
+}
+@media (max-width: 1200px) {
+    #section-2 {
+        margin-left: 50px;
+    }
+}
+@media (max-width: 700px) {
+    #section-2 {
+        margin-left: 0px;
+    }
+    #section-2 div.container {
+        padding: 60px 10px;
+    }
+    #section-2 div.container form div.flex-card {
+        padding: 40px 20px;
+        -webkit-box-shadow: none; 
+        box-shadow: none;
+        border: 1px solid var(--input-border);
+        border-radius: 10px;
+    }
+    #section-2 div.container form div.flex-card div.flex-content {
+        flex-direction: column;
+    }
+    #section-2 div.container form div.flex-card div.flex-content div.flex-item {
+        width: 100%;
+    }
+    
+}

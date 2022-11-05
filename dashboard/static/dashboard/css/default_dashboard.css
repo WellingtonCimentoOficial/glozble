@@ -1,0 +1,274 @@
+/*                        CSS PADRÃO                          */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --roxo-principal: rgb(132, 0, 255);
+    --roxo-disabled:rgba(132, 0, 255, 0.185);
+    --preto: #363636;
+    --input-border: #e5e5e5;
+    --input-border-focus:#c0c0c0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+/*--------SCROLLBAR-CUSTOM--------*/
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/*-------------OTHERS---------------*/
+.stop-scrolling {
+    overflow: hidden;
+}
+.stop-interaction {
+    pointer-events: none;
+}
+.msg-error-text {
+    display: block;
+    color: red;
+    margin-top: 5px;
+}
+
+/*--------------SPINNER--------------*/
+#spinner-loading {
+    width: calc(100% - 350px);
+    margin-left: 350px;
+}
+
+/*-------------------MENU-BUTTON-----------------*/
+div.flex-menu {
+    position: fixed;
+    top: 18px;
+    left: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 10;
+}
+div.flex-menu:hover {
+    transform: scale(1.05, 1.05);
+}
+div.flex-menu i {
+    font-size: 22pt;
+    color: white;
+    display: none;
+}
+
+/*-----------------section1------------------*/
+#section-1 {
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    background-color: var(--roxo-principal);
+    z-index: 1;
+}
+#logo {
+    width: 160px;
+    margin-top: 40px;
+}
+#section-1 div.container div.flex-item a {
+    display: block;
+    text-align: center;
+}
+
+/*
+#section-1 div.container div.flex-item h1 {
+    text-align: center;
+    font-size: 28pt;
+    margin-top: 30px;
+}
+*/
+#section-1 div.container div.flex-item p {
+    text-align: center;
+    font-size: 12pt;
+    margin-bottom: 30px;
+    color: white;
+}
+#section-1 div.container ul.flex-item-container li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    margin: 5px 0px;
+    /*border-bottom: 3px solid white;*/
+    transition: 0.5s;
+}
+#section-1 div.container ul.flex-item-container li:hover {
+    background-color: white;
+}
+#section-1 div.container ul.flex-item-container li i {
+    position: absolute;
+    left: 0px;
+    font-size: 20pt;
+    color: var(--preto);
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+}
+#section-1 div.container ul.flex-item-container li a {
+    width: 100%;
+    padding: 15px 0px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    color: white;
+}
+
+
+/*-----------------section logout-----------------*/
+section#flex-logout {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    z-index: 9;
+}
+section#flex-logout div.flex-item {
+    position: relative;
+}
+section#flex-logout div.flex-item div.logout-image {
+    /*background-color: gold;*/
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+section#flex-logout div.flex-item div.logout-image span {
+    font-size: 13pt;
+    color: var(--roxo-principal);
+    transition: 0.5s;
+    margin-right: 10px;
+}
+section#flex-logout div.flex-item div.logout-image img {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+section#flex-logout div.flex-item div.logout-opcoes {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    bottom: -1;
+    right: 0;
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+}
+section#flex-logout div.flex-item div.logout-opcoes a {
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+    padding: 8px 0px;
+    color: var(--roxo-principal);
+}
+section#flex-logout div.flex-item div.logout-opcoes a:hover {
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+
+/*----------------footer-----------------*/
+footer {
+    margin-left: 350px;
+    /*background-color: var(--roxo-principal);*/
+}
+footer div.container {
+    width: 70%;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer div.container div.flex-item span {
+    color: var(--preto);
+}
+
+
+
+/*----------------------RESPONSIVE---------------------*/
+@media (max-width: 1200px) {
+    footer {
+        margin-left: 50px;
+    }
+    #spinner-loading {
+        width: calc(100% - 50px);
+        margin-left: 50px;
+    }
+    #section-1 {
+        width: 50px;
+    }
+    #section-1 div.container div.flex-item h1, #section-1 div.container div.flex-item p {
+        display: none;
+    }
+    #section-1 div.container ul.flex-item-container {
+        margin-top: 55px;
+    }
+    #section-1 div.container ul.flex-item-container li {
+        margin: 5px 0px;
+        text-align: center;
+    }
+    #section-1 div.container ul.flex-item-container li a {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 10px 0px;
+        margin-left: 0px;
+    }
+    #logo {
+        display: none;
+    }
+    div.flex-menu i {
+        display: block;
+    }
+    #section-1 div.container div.settings a {
+        display: none;
+    }
+    #section-1 div.container div.settings i {
+        margin-bottom: 20px;
+    }
+
+}
+@media (max-width: 700px) {
+    footer {
+        margin-left: 0px;
+    }
+    #spinner-loading {
+        width: 100%;
+        margin-left: 0px;
+    }
+    #section-1 {
+        display: none;
+    }
+    div.flex-menu {
+        position: absolute;
+    }
+    div.flex-menu i {
+        color: var(--roxo-principal);
+    }
+    #section-1 div.container div.settings a {
+        display: block;
+    }
+    #section-1 div.container div.settings i {
+        margin-bottom: 0px;
+    }
+    section#flex-logout {
+        top: 17px;
+    }
+    section#flex-logout div.flex-item div.logout-image img {
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,0 +1,130 @@
+#section-2 {
+    /*background-color: red;*/
+    color: var(--preto);
+    margin-left: 350px;
+    padding: 65px 0px 65px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+#section-2 div.container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: gold;*/
+}
+#section-2 div.container div.flex-item-container {
+    /*background-color: orange;*/
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+#section-2 div.container div.flex-item-container div.flex-items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    /*border: 2px solid var(--input-border);*/
+}
+#section-2 div.container div.flex-item-container div.flex-items div.timer-ads {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 1px solid var(--preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: orange;*/
+    margin: 10px 0px;
+    pointer-events: none;
+    cursor: default;
+}
+#section-2 div.container div.flex-item-container div.flex-items div.timer-ads span {
+    font-size: 50pt;
+}
+#section-2 div.container div.flex-item-container div.flex-items div.timer-description {
+    text-align: center;
+    margin: 20px 0px;
+}
+#section-2 div.container div.flex-item-container div.flex-items div.timer-description a {
+    text-decoration: none;
+    color: var(--roxo-principal);
+}
+#section-2 div.container div.flex-item-container div.flex-items div.timer-description a:hover {
+    text-decoration: underline;
+}
+#message {
+    text-align: center;
+}
+#message span {
+    transition: 0.5s;
+    font-size: 13pt;
+    font-weight: 500;
+    pointer-events: none;
+    color: var(--roxo-principal);
+}
+.btn-disabled {
+    display: none;
+    text-align: center;
+    width: 180px;
+    padding: 5px 0px;
+    text-decoration: none;
+    background-color: var(--roxo-disabled);
+    color: white;
+    font-size: 13pt;
+    border: 2px solid var(--roxo-disabled);
+    transition: 0.5s;
+    cursor: default;
+    pointer-events: none;
+}
+.btn-enabled {
+    display: block;
+    text-align: center;
+    width: 180px;
+    padding: 5px 0px;
+    text-decoration: none;
+    background-color: var(--roxo-principal);
+    color: white;
+    font-size: 15pt;
+    border: 2px solid var(--roxo-principal);
+    transition: 0.5s;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.btn-enabled:hover {
+    background-color: white;
+    color: var(--roxo-principal);
+}
+
+.grecaptcha-badge {
+    display: none;
+}
+
+/*-------------RESPONSIVE--------------*/
+@media (max-width: 1612px){
+    #section-2 div.container div.flex-item-container div.flex-items {
+        height: auto;
+    }
+}
+
+
+@media (max-width: 1200px){
+    #section-2 {
+        margin-left: 50px;
+    }
+}
+@media (max-width: 700px){
+    #section-2 {
+        margin-left: 0px;
+    }
+}
