@@ -1,5 +1,6 @@
 # site01
 
+* First clone this repository with command "git clone https://github.com/WellingtonCimentoOficial/site01.git" and and enter the folder with command "cd site01"
 * replace in the project these words with your informations: EDITAR,YOURKEY and YOURID
 * rename the .env-example to .env and fill in the fields
 * Create virtual enviroment with command "python -m venv venv"
