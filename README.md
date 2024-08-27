@@ -1,4 +1,4 @@
-# site01
+# Glozble
 
 * First clone this repository with command "git clone https://github.com/WellingtonCimentoOficial/site01.git" and enter the folder with command "cd site01"
 * replace in the project these words with your informations: EDITAR,YOURKEY and YOURID
