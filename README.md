@@ -53,6 +53,8 @@
 <img width="1440" alt="Screenshot 2024-08-29 at 01 00 54" src="https://github.com/user-attachments/assets/becf4be5-89b1-434b-8b51-988308ae8e60">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 00 57" src="https://github.com/user-attachments/assets/9063de6a-9337-4d1c-9e35-bfda4d7911d6">
 
+
+
 # Mobile screenshots
 
 <img width="1440" alt="Screenshot 2024-08-29 at 01 46 27" src="https://github.com/user-attachments/assets/86ccefea-9723-48f4-90f1-9490b33b00df">
