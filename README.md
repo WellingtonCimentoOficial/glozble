@@ -11,6 +11,7 @@
 * Run django with command "python manage.py runserver"
 * Access url http://127.0.0.1:8000/accounts/dashboard/admin in your browser and sign with your credentials after click in "Subscriptions" and create a new subscription with name "FREE" and save
 
+# Desktop screenshots
 
 <img width="1440" alt="Screenshot 2024-08-29 at 00 49 02" src="https://github.com/user-attachments/assets/905eae7b-bf94-4230-ae8b-0c251ec7759b">
 <img width="1440" alt="Screenshot 2024-08-29 at 00 49 09" src="https://github.com/user-attachments/assets/9187ed81-e1f8-4874-8f66-58ee303c3274">
@@ -52,6 +53,7 @@
 <img width="1440" alt="Screenshot 2024-08-29 at 01 00 54" src="https://github.com/user-attachments/assets/becf4be5-89b1-434b-8b51-988308ae8e60">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 00 57" src="https://github.com/user-attachments/assets/9063de6a-9337-4d1c-9e35-bfda4d7911d6">
 
+# Mobile screenshots
 
 <img width="1440" alt="Screenshot 2024-08-29 at 01 46 27" src="https://github.com/user-attachments/assets/86ccefea-9723-48f4-90f1-9490b33b00df">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 46 31" src="https://github.com/user-attachments/assets/b7146399-b683-4ce8-a6c1-f2806c14a0c0">
@@ -70,10 +72,10 @@
 <img width="1440" alt="Screenshot 2024-08-29 at 01 48 07" src="https://github.com/user-attachments/assets/7d1b9917-c327-4a87-b467-36a26c982dab">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 48 12" src="https://github.com/user-attachments/assets/fc07c83f-1968-44da-88fb-c7b609f01447">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 48 16" src="https://github.com/user-attachments/assets/2e8cd89e-4b98-4b1e-bdfe-60c205e9eb69">
+<img width="1440" alt="Screenshot 2024-08-29 at 01 49 30" src="https://github.com/user-attachments/assets/a32b8e14-4310-4124-9321-fcdc3d9dc27f">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 48 38" src="https://github.com/user-attachments/assets/51b07fb8-bf4c-470b-a1d9-426e2f3bc31c">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 48 41" src="https://github.com/user-attachments/assets/5a2f97bb-f5fe-43fd-af73-9a734b8340d8">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 48 46" src="https://github.com/user-attachments/assets/362bbe15-affd-4293-a81c-37f301646037">
-<img width="1440" alt="Screenshot 2024-08-29 at 01 49 30" src="https://github.com/user-attachments/assets/a32b8e14-4310-4124-9321-fcdc3d9dc27f">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 49 47" src="https://github.com/user-attachments/assets/8d117a30-bea9-4e0a-bc74-3baebb5b8a13">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 49 50" src="https://github.com/user-attachments/assets/0a8185d6-a17b-43dc-a18b-300958475675">
 <img width="1440" alt="Screenshot 2024-08-29 at 01 49 53" src="https://github.com/user-attachments/assets/73ff08f0-785e-4b9c-951e-8d52db3ed070">
